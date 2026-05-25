@@ -1,0 +1,16 @@
+claude_model: "claude-sonnet-4-6"
+
+data_generator:
+  min_rows: 50
+  max_rows: 200
+  temas:
+    - rh
+    - financeiro
+    - ecommerce
+    - logistica
+    - marketing
+
+pipeline:
+  bronze_table_prefix: "bronze"
+  silver_table_prefix: "silver"
+  databricks_notebook_base_path: "/data_squad"

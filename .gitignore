@@ -35,3 +35,9 @@ logs/
 # DuckDB
 *.duckdb
 *.duckdb.wal
+
+# Generated artefacts (per-run outputs)
+generated/*/
+
+# Google service account key
+config/service_account.json
