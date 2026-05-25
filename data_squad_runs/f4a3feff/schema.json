@@ -1,0 +1,53 @@
+{
+  "table_name": "TBFIN_TRANSACOES",
+  "columns": [
+    {
+      "name": "ID_TRANSACAO",
+      "type": "integer",
+      "nullable": false,
+      "is_pk": true
+    },
+    {
+      "name": "NM_CLIENTE",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "CD_CPF",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "CD_TIPO_TRANSACAO",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "VL_TRANSACAO",
+      "type": "float",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "DT_TRANSACAO",
+      "type": "date",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "FL_ATIVO",
+      "type": "boolean",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "CD_AGENCIA",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    }
+  ]
+}
