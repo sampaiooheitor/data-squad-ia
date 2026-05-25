@@ -1,0 +1,112 @@
+{
+  "rules": [
+    {
+      "column": "ID_ENTREGA",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "ID_ENTREGA",
+      "rule_type": "unique",
+      "expression": "COUNT(DISTINCT value) = COUNT(value)",
+      "severity": "error"
+    },
+    {
+      "column": "ID_ENTREGA",
+      "rule_type": "range",
+      "expression": "value BETWEEN 1 AND 9999999999",
+      "severity": "error"
+    },
+    {
+      "column": "NM_DESTINATARIO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "NM_DESTINATARIO",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^[A-Za-zÀ-ÿ\\s]{2,100}$'",
+      "severity": "warning"
+    },
+    {
+      "column": "CD_CPF_DESTINATARIO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "CD_CPF_DESTINATARIO",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$'",
+      "severity": "error"
+    },
+    {
+      "column": "DT_POSTAGEM",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "DT_POSTAGEM",
+      "rule_type": "range",
+      "expression": "value BETWEEN '2000-01-01' AND CURRENT_DATE",
+      "severity": "error"
+    },
+    {
+      "column": "DT_ENTREGA_PREVISTA",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "DT_ENTREGA_PREVISTA",
+      "rule_type": "range",
+      "expression": "value BETWEEN '2000-01-01' AND DATEADD(YEAR, 1, CURRENT_DATE)",
+      "severity": "warning"
+    },
+    {
+      "column": "DT_ENTREGA_PREVISTA",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^\\d{4}-\\d{2}-\\d{2}$'",
+      "severity": "error"
+    },
+    {
+      "column": "VL_FRETE",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "VL_FRETE",
+      "rule_type": "range",
+      "expression": "value BETWEEN 0.01 AND 99999.99",
+      "severity": "error"
+    },
+    {
+      "column": "CD_STATUS_ENTREGA",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "CD_STATUS_ENTREGA",
+      "rule_type": "referential",
+      "expression": "value IN ('PENDENTE', 'EM_TRANSITO', 'SAIU_PARA_ENTREGA', 'ENTREGUE', 'DEVOLVIDO', 'EXTRAVIADO', 'CANCELADO')",
+      "severity": "error"
+    },
+    {
+      "column": "FL_ENTREGA_REALIZADA",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "FL_ENTREGA_REALIZADA",
+      "rule_type": "referential",
+      "expression": "value IN (true, false)",
+      "severity": "error"
+    }
+  ]
+}

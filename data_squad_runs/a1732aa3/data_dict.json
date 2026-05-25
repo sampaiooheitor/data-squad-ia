@@ -1,0 +1,79 @@
+{
+  "tema": "Logistica",
+  "table_name": "TBLOG_ENTREGAS",
+  "description": "Tabela que armazena informações sobre entregas logísticas, incluindo destinatários, status, prazos e valores associados.",
+  "columns": [
+    {
+      "origem": "LOG",
+      "tabela": "TBLOG_ENTREGAS",
+      "campo": "ID_ENTREGA",
+      "datatype": "INTEGER",
+      "format_data": "",
+      "descricao": "Identificador único da entrega",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "LOG",
+      "tabela": "TBLOG_ENTREGAS",
+      "campo": "NM_DESTINATARIO",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Nome completo do destinatário da entrega",
+      "indicador_sensivel": "S"
+    },
+    {
+      "origem": "LOG",
+      "tabela": "TBLOG_ENTREGAS",
+      "campo": "CD_CPF_DESTINATARIO",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "CPF do destinatário da entrega",
+      "indicador_sensivel": "S"
+    },
+    {
+      "origem": "LOG",
+      "tabela": "TBLOG_ENTREGAS",
+      "campo": "DT_POSTAGEM",
+      "datatype": "DATE",
+      "format_data": "YYYY-MM-DD",
+      "descricao": "Data em que o pacote foi postado",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "LOG",
+      "tabela": "TBLOG_ENTREGAS",
+      "campo": "DT_ENTREGA_PREVISTA",
+      "datatype": "DATE",
+      "format_data": "YYYY-MM-DD",
+      "descricao": "Data prevista para a entrega do pacote",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "LOG",
+      "tabela": "TBLOG_ENTREGAS",
+      "campo": "VL_FRETE",
+      "datatype": "DECIMAL(15,2)",
+      "format_data": "",
+      "descricao": "Valor cobrado pelo frete da entrega",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "LOG",
+      "tabela": "TBLOG_ENTREGAS",
+      "campo": "CD_STATUS_ENTREGA",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Status atual da entrega (PENDENTE, EM_TRANSITO, ENTREGUE, DEVOLVIDO)",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "LOG",
+      "tabela": "TBLOG_ENTREGAS",
+      "campo": "FL_ENTREGA_REALIZADA",
+      "datatype": "BOOLEAN",
+      "format_data": "",
+      "descricao": "Indicador se a entrega foi efetivamente realizada",
+      "indicador_sensivel": "N"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "table_name": "TBLOG_ENTREGAS",
+  "columns": [
+    {
+      "name": "ID_ENTREGA",
+      "type": "integer",
+      "nullable": false,
+      "is_pk": true
+    },
+    {
+      "name": "NM_DESTINATARIO",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "CD_CPF_DESTINATARIO",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "DT_POSTAGEM",
+      "type": "date",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "DT_ENTREGA_PREVISTA",
+      "type": "date",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "VL_FRETE",
+      "type": "float",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "CD_STATUS_ENTREGA",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "FL_ENTREGA_REALIZADA",
+      "type": "boolean",
+      "nullable": false,
+      "is_pk": false
+    }
+  ]
+}
