@@ -1,0 +1,53 @@
+{
+  "table_name": "transacoes_financeiras",
+  "columns": [
+    {
+      "name": "id_transacao",
+      "type": "string",
+      "nullable": false,
+      "is_pk": true
+    },
+    {
+      "name": "nome_completo",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "cpf",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "email",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "tipo_transacao",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "valor",
+      "type": "float",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "data_transacao",
+      "type": "timestamp",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    }
+  ]
+}
