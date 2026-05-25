@@ -1,0 +1,60 @@
+{
+  "columns": [
+    {
+      "name": "id_transacao",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Financeiro",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "nome_completo",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "Financeiro",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "cpf",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "Financeiro",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "email",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "Financeiro",
+      "masking_strategy": "hash"
+    },
+    {
+      "name": "tipo_transacao",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Financeiro",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "valor",
+      "pii": false,
+      "sensitivity": "confidential",
+      "owner": "Financeiro",
+      "masking_strategy": "encrypt"
+    },
+    {
+      "name": "data_transacao",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Financeiro",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "status",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Financeiro",
+      "masking_strategy": "none"
+    }
+  ]
+}
