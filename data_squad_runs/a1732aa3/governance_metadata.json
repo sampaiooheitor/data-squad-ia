@@ -1,0 +1,60 @@
+{
+  "columns": [
+    {
+      "name": "ID_ENTREGA",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Logística",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "NM_DESTINATARIO",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "Logística",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "CD_CPF_DESTINATARIO",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "Logística",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "DT_POSTAGEM",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Logística",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "DT_ENTREGA_PREVISTA",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Logística",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "VL_FRETE",
+      "pii": false,
+      "sensitivity": "confidential",
+      "owner": "Financeiro",
+      "masking_strategy": "encrypt"
+    },
+    {
+      "name": "CD_STATUS_ENTREGA",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Logística",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "FL_ENTREGA_REALIZADA",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Logística",
+      "masking_strategy": "none"
+    }
+  ]
+}
