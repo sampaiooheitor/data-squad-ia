@@ -1,0 +1,53 @@
+{
+  "table_name": "logistica_entregas",
+  "columns": [
+    {
+      "name": "id_entrega",
+      "type": "string",
+      "nullable": false,
+      "is_pk": true
+    },
+    {
+      "name": "nome_motorista",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "cpf_motorista",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "email_cliente",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "cidade_destino",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "peso_kg",
+      "type": "float",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "status_entrega",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "data_entrega",
+      "type": "date",
+      "nullable": false,
+      "is_pk": false
+    }
+  ]
+}

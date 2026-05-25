@@ -1,0 +1,47 @@
+{
+  "tema": "logistica",
+  "table_name": "logistica_entregas",
+  "description": "Tabela de registros de entregas logísticas com informações de motoristas, clientes e status de entrega.",
+  "columns": [
+    {
+      "name": "id_entrega",
+      "description": "Identificador único da entrega",
+      "example": "ENT-00001"
+    },
+    {
+      "name": "nome_motorista",
+      "description": "Nome completo do motorista responsável pela entrega",
+      "example": "Carlos Alberto Souza"
+    },
+    {
+      "name": "cpf_motorista",
+      "description": "CPF fictício do motorista",
+      "example": "123.456.789-00"
+    },
+    {
+      "name": "email_cliente",
+      "description": "E-mail fictício do cliente destinatário",
+      "example": "joao.silva@email.com"
+    },
+    {
+      "name": "cidade_destino",
+      "description": "Cidade de destino da entrega",
+      "example": "São Paulo"
+    },
+    {
+      "name": "peso_kg",
+      "description": "Peso do pacote em quilogramas",
+      "example": "12.5"
+    },
+    {
+      "name": "status_entrega",
+      "description": "Status atual da entrega",
+      "example": "Entregue"
+    },
+    {
+      "name": "data_entrega",
+      "description": "Data da entrega realizada ou prevista",
+      "example": "2024-03-15"
+    }
+  ]
+}

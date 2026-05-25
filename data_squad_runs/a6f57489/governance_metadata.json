@@ -1,0 +1,60 @@
+{
+  "columns": [
+    {
+      "name": "id_entrega",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Logística",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "nome_motorista",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "Logística",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "cpf_motorista",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "RH",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "email_cliente",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "Comercial",
+      "masking_strategy": "hash"
+    },
+    {
+      "name": "cidade_destino",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Logística",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "peso_kg",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Logística",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "status_entrega",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Logística",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "data_entrega",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Logística",
+      "masking_strategy": "none"
+    }
+  ]
+}
