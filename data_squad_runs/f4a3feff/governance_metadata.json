@@ -1,0 +1,60 @@
+{
+  "columns": [
+    {
+      "name": "ID_TRANSACAO",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Financeiro",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "NM_CLIENTE",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "Financeiro",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "CD_CPF",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "Financeiro",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "CD_TIPO_TRANSACAO",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Financeiro",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "VL_TRANSACAO",
+      "pii": false,
+      "sensitivity": "confidential",
+      "owner": "Financeiro",
+      "masking_strategy": "encrypt"
+    },
+    {
+      "name": "DT_TRANSACAO",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Financeiro",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "FL_ATIVO",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "TI",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "CD_AGENCIA",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Financeiro",
+      "masking_strategy": "none"
+    }
+  ]
+}
