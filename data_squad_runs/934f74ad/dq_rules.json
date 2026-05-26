@@ -1,0 +1,124 @@
+{
+  "rules": [
+    {
+      "column": "ID_FUNCIONARIO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "ID_FUNCIONARIO",
+      "rule_type": "unique",
+      "expression": "COUNT(DISTINCT value) = COUNT(value)",
+      "severity": "error"
+    },
+    {
+      "column": "ID_FUNCIONARIO",
+      "rule_type": "range",
+      "expression": "value BETWEEN 1 AND 2147483647",
+      "severity": "error"
+    },
+    {
+      "column": "NM_FUNCIONARIO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "NM_FUNCIONARIO",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^[A-Za-zÀ-ÖØ-öø-ÿ\\s\\-\\']{2,100}$'",
+      "severity": "warning"
+    },
+    {
+      "column": "CD_CPF",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "CD_CPF",
+      "rule_type": "unique",
+      "expression": "COUNT(DISTINCT value) = COUNT(value)",
+      "severity": "error"
+    },
+    {
+      "column": "CD_CPF",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^[0-9]{3}\\.?[0-9]{3}\\.?[0-9]{3}\\-?[0-9]{2}$'",
+      "severity": "error"
+    },
+    {
+      "column": "DT_ADMISSAO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "DT_ADMISSAO",
+      "rule_type": "range",
+      "expression": "value BETWEEN '1900-01-01' AND CURRENT_DATE",
+      "severity": "error"
+    },
+    {
+      "column": "DT_ADMISSAO",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$'",
+      "severity": "error"
+    },
+    {
+      "column": "NM_CARGO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "NM_CARGO",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^[A-Za-zÀ-ÖØ-öø-ÿ\\s\\-\\/]{2,100}$'",
+      "severity": "warning"
+    },
+    {
+      "column": "NM_DEPARTAMENTO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "NM_DEPARTAMENTO",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^[A-Za-zÀ-ÖØ-öø-ÿ\\s\\-\\/]{2,100}$'",
+      "severity": "warning"
+    },
+    {
+      "column": "VL_SALARIO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "VL_SALARIO",
+      "rule_type": "range",
+      "expression": "value BETWEEN 1412.00 AND 999999.99",
+      "severity": "error"
+    },
+    {
+      "column": "VL_SALARIO",
+      "rule_type": "range",
+      "expression": "value BETWEEN 1412.00 AND 50000.00",
+      "severity": "warning"
+    },
+    {
+      "column": "FL_ATIVO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "FL_ATIVO",
+      "rule_type": "referential",
+      "expression": "value IN (true, false)",
+      "severity": "error"
+    }
+  ]
+}
