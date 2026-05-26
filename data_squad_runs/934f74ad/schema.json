@@ -1,0 +1,53 @@
+{
+  "table_name": "TBRH_FUNCIONARIOS",
+  "columns": [
+    {
+      "name": "ID_FUNCIONARIO",
+      "type": "integer",
+      "nullable": false,
+      "is_pk": true
+    },
+    {
+      "name": "NM_FUNCIONARIO",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "CD_CPF",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "DT_ADMISSAO",
+      "type": "date",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "NM_CARGO",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "NM_DEPARTAMENTO",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "VL_SALARIO",
+      "type": "float",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "FL_ATIVO",
+      "type": "boolean",
+      "nullable": false,
+      "is_pk": false
+    }
+  ]
+}
