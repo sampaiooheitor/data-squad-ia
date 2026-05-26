@@ -1,0 +1,53 @@
+{
+  "table_name": "TBFIN_LANCAMENTOS",
+  "columns": [
+    {
+      "name": "ID_LANCAMENTO",
+      "type": "integer",
+      "nullable": false,
+      "is_pk": true
+    },
+    {
+      "name": "DT_LANCAMENTO",
+      "type": "date",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "VL_LANCAMENTO",
+      "type": "float",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "CD_CENTRO_CUSTO",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "NM_FORNECEDOR",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "NR_CPF_CNPJ",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "DS_HISTORICO",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "CD_STATUS",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    }
+  ]
+}

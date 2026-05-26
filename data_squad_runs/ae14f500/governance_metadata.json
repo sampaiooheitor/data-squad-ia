@@ -1,0 +1,60 @@
+{
+  "columns": [
+    {
+      "name": "ID_LANCAMENTO",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Financeiro",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "DT_LANCAMENTO",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Financeiro",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "VL_LANCAMENTO",
+      "pii": false,
+      "sensitivity": "confidential",
+      "owner": "Financeiro",
+      "masking_strategy": "encrypt"
+    },
+    {
+      "name": "CD_CENTRO_CUSTO",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Financeiro",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "NM_FORNECEDOR",
+      "pii": true,
+      "sensitivity": "confidential",
+      "owner": "Financeiro",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "NR_CPF_CNPJ",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "Financeiro",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "DS_HISTORICO",
+      "pii": false,
+      "sensitivity": "confidential",
+      "owner": "Financeiro",
+      "masking_strategy": "encrypt"
+    },
+    {
+      "name": "CD_STATUS",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Financeiro",
+      "masking_strategy": "none"
+    }
+  ]
+}
