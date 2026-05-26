@@ -1,0 +1,79 @@
+{
+  "tema": "E-commerce",
+  "table_name": "TBECOM_PEDIDOS",
+  "description": "Tabela contendo informações sobre pedidos realizados em plataforma de e-commerce, incluindo dados do cliente, produto e transação.",
+  "columns": [
+    {
+      "origem": "ECOM",
+      "tabela": "TBECOM_PEDIDOS",
+      "campo": "ID_PEDIDO",
+      "datatype": "INTEGER",
+      "format_data": "",
+      "descricao": "Identificador único do pedido",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "ECOM",
+      "tabela": "TBECOM_PEDIDOS",
+      "campo": "NM_CLIENTE",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Nome completo do cliente que realizou o pedido",
+      "indicador_sensivel": "S"
+    },
+    {
+      "origem": "ECOM",
+      "tabela": "TBECOM_PEDIDOS",
+      "campo": "CD_CPF",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "CPF do cliente no formato XXX.XXX.XXX-XX",
+      "indicador_sensivel": "S"
+    },
+    {
+      "origem": "ECOM",
+      "tabela": "TBECOM_PEDIDOS",
+      "campo": "NM_PRODUTO",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Nome do produto adquirido no pedido",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "ECOM",
+      "tabela": "TBECOM_PEDIDOS",
+      "campo": "CD_CATEGORIA",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Categoria do produto (ex: Eletrônicos, Roupas, Livros)",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "ECOM",
+      "tabela": "TBECOM_PEDIDOS",
+      "campo": "VL_TOTAL",
+      "datatype": "DECIMAL(15,2)",
+      "format_data": "",
+      "descricao": "Valor total do pedido em reais",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "ECOM",
+      "tabela": "TBECOM_PEDIDOS",
+      "campo": "DT_PEDIDO",
+      "datatype": "DATE",
+      "format_data": "YYYY-MM-DD",
+      "descricao": "Data em que o pedido foi realizado",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "ECOM",
+      "tabela": "TBECOM_PEDIDOS",
+      "campo": "FL_STATUS",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Status atual do pedido (APROVADO, CANCELADO, EM_TRANSITO, ENTREGUE)",
+      "indicador_sensivel": "N"
+    }
+  ]
+}
