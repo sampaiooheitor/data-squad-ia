@@ -123,7 +123,18 @@ def _run_notebook_and_wait(host: str, token: str, notebook_path: str, run_name: 
         if lifecycle == "TERMINATED":
             result = state.get("result_state", "FAILED")
             if result != "SUCCESS":
-                raise RuntimeError(f"Notebook {notebook_path} failed: {result}")
+                output_resp = requests.get(
+                    f"{host}/api/2.0/jobs/runs/get-output",
+                    headers={"Authorization": f"Bearer {token}"},
+                    params={"run_id": run_id},
+                    timeout=30,
+                )
+                error_detail = ""
+                if output_resp.ok:
+                    out = output_resp.json()
+                    error_detail = out.get("error", "") or out.get("notebook_output", {}).get("result", "")
+                logger.error("Notebook FAILED — path: %s | error: %s", notebook_path, error_detail)
+                raise RuntimeError(f"Notebook {notebook_path} failed: {result} | {error_detail}")
             return
         if lifecycle in ("INTERNAL_ERROR", "SKIPPED"):
             state_msg = state.get("state_message", "no details")
