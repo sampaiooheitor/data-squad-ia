@@ -14,8 +14,8 @@ function onFormSubmit(e) {
   var sampleCsv = "";
 
   for (var i = 0; i < itemResponses.length; i++) {
-    var item  = itemResponses[i];
-    var title = item.getItem().getTitle();
+    var item   = itemResponses[i];
+    var title  = item.getItem().getTitle();
     var answer = item.getResponse();
 
     if (title === "Data Dictionary") {
@@ -32,8 +32,7 @@ function onFormSubmit(e) {
   }
 
   var fileId  = extractFileId(fileUrl);
-  var file    = DriveApp.getFileById(fileId);
-  var dictCsv = file.getBlob().getDataAsString("UTF-8");
+  var dictCsv = readFileAsPipeSeparated(fileId);
 
   var lines     = dictCsv.trim().split("\n");
   var tableName = "";
@@ -69,6 +68,37 @@ function onFormSubmit(e) {
   var response = UrlFetchApp.fetch(url, options);
   Logger.log("GitHub Actions status: " + response.getResponseCode());
   Logger.log("Response: " + response.getContentText());
+}
+
+function readFileAsPipeSeparated(fileId) {
+  var file     = DriveApp.getFileById(fileId);
+  var mimeType = file.getMimeType();
+
+  // CSV ou texto simples — lê direto
+  if (mimeType === "text/csv" || mimeType === "text/plain") {
+    return file.getBlob().getDataAsString("UTF-8");
+  }
+
+  // XLSX ou Google Sheets — converte para Sheet temporária e lê
+  var tempFile = Drive.Files.copy(
+    { title: "temp_dict_" + fileId, mimeType: MimeType.GOOGLE_SHEETS },
+    fileId,
+    { convert: true }
+  );
+
+  try {
+    var ss    = SpreadsheetApp.openById(tempFile.id);
+    var sheet = ss.getSheets()[0];
+    var data  = sheet.getDataRange().getValues();
+
+    var lines = data.map(function(row) {
+      return row.join("|");
+    });
+
+    return lines.join("\n");
+  } finally {
+    Drive.Files.remove(tempFile.id);
+  }
 }
 
 function extractFileId(url) {
