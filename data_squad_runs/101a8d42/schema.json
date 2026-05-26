@@ -1,0 +1,53 @@
+{
+  "table_name": "TBECOM_PEDIDOS",
+  "columns": [
+    {
+      "name": "ID_PEDIDO",
+      "type": "integer",
+      "nullable": false,
+      "is_pk": true
+    },
+    {
+      "name": "NM_CLIENTE",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "CD_CPF",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "NM_PRODUTO",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "CD_CATEGORIA",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "VL_TOTAL",
+      "type": "float",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "DT_PEDIDO",
+      "type": "timestamp",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "FL_STATUS",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    }
+  ]
+}
