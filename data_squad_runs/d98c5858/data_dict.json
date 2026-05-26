@@ -1,0 +1,43 @@
+{
+  "tema": "unknown",
+  "table_name": "TBFIN_LANCAMENTOS_RH",
+  "description": "Tabela TBFIN_LANCAMENTOS_RH carregada via dicionário do formulário.",
+  "columns": [
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_LANCAMENTOS_RH",
+      "campo": "ID_LANCAMENTO",
+      "datatype": "BIGINT",
+      "format_data": "",
+      "descricao": "Identificador único",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_LANCAMENTOS_RH",
+      "campo": "DT_LANCAMENTO",
+      "datatype": "DATE",
+      "format_data": "yyyy-MM-dd",
+      "descricao": "Data do lançamento",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_LANCAMENTOS_RH",
+      "campo": "VL_LANCAMENTO",
+      "datatype": "DECIMAL",
+      "format_data": "",
+      "descricao": "Valor em reais",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_LANCAMENTOS_RH",
+      "campo": "NM_FORNECEDOR",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Nome do fornecedor",
+      "indicador_sensivel": "N"
+    }
+  ]
+}
