@@ -1,0 +1,60 @@
+{
+  "columns": [
+    {
+      "name": "ID_PEDIDO",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "TI",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "NM_CLIENTE",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "Comercial",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "CD_CPF",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "Comercial",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "NM_PRODUTO",
+      "pii": false,
+      "sensitivity": "public",
+      "owner": "Comercial",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "CD_CATEGORIA",
+      "pii": false,
+      "sensitivity": "public",
+      "owner": "Comercial",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "VL_TOTAL",
+      "pii": false,
+      "sensitivity": "confidential",
+      "owner": "Financeiro",
+      "masking_strategy": "encrypt"
+    },
+    {
+      "name": "DT_PEDIDO",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Comercial",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "FL_STATUS",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Comercial",
+      "masking_strategy": "none"
+    }
+  ]
+}
