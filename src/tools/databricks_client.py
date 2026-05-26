@@ -18,6 +18,27 @@ _POLL_INTERVAL = 5
 _MAX_WAIT = 300
 
 
+def upload_csv(ctx: RunContext) -> RunContext:
+    host = settings.databricks_host.rstrip("/")
+    token = settings.databricks_token
+    table_name = ctx.data_dict.table_name if ctx.data_dict else ctx.run_id
+    volume_path = f"/Volumes/prd/bronze/landing/{table_name}/raw.csv"
+
+    resp = requests.put(
+        f"{host}/api/2.0/fs/files{volume_path}",
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/octet-stream",
+        },
+        data=ctx.csv_content.encode("utf-8"),
+        timeout=30,
+    )
+    resp.raise_for_status()
+    ctx.csv_dbfs_path = volume_path
+    logger.info("CSV uploaded to Volume: %s", ctx.csv_dbfs_path)
+    return ctx
+
+
 def deploy_and_run(ctx: RunContext) -> RunContext:
     host = settings.databricks_host.rstrip("/")
     token = settings.databricks_token
@@ -25,7 +46,9 @@ def deploy_and_run(ctx: RunContext) -> RunContext:
     bronze_path = f"{_NOTEBOOK_BASE}/{ctx.run_id}/bronze_ingest"
     silver_path = f"{_NOTEBOOK_BASE}/{ctx.run_id}/silver_transform"
 
-    logger.info("Importing notebooks to Databricks workspace")
+    logger.info("Importing notebooks to Databricks workspace — host=%s", host)
+    _ensure_folder(host, token, _NOTEBOOK_BASE)
+    _ensure_folder(host, token, f"{_NOTEBOOK_BASE}/{ctx.run_id}")
     _import_notebook(host, token, bronze_path, ctx.bronze_notebook)
     _import_notebook(host, token, silver_path, ctx.silver_notebook)
 
@@ -38,6 +61,15 @@ def deploy_and_run(ctx: RunContext) -> RunContext:
     logger.info("Silver table created: %s", ctx.table_silver)
 
     return ctx
+
+
+def _ensure_folder(host: str, token: str, path: str) -> None:
+    requests.post(
+        f"{host}/api/2.0/workspace/mkdirs",
+        headers={"Authorization": f"Bearer {token}"},
+        json={"path": path},
+        timeout=30,
+    ).raise_for_status()
 
 
 def _import_notebook(host: str, token: str, path: str, content: str) -> None:
@@ -67,16 +99,13 @@ def _run_notebook_and_wait(host: str, token: str, notebook_path: str, run_name: 
                 {
                     "task_key": "run",
                     "notebook_task": {"notebook_path": notebook_path},
-                    "environment_key": "default",
                 }
-            ],
-            "environments": [
-                {"environment_key": "default", "spec": {"client": "1"}}
             ],
         },
         timeout=30,
     )
     resp.raise_for_status()
+    logger.info("Jobs API response: %s %s", resp.status_code, resp.text[:500])
     run_id = resp.json()["run_id"]
 
     elapsed = 0
@@ -97,7 +126,9 @@ def _run_notebook_and_wait(host: str, token: str, notebook_path: str, run_name: 
                 raise RuntimeError(f"Notebook {notebook_path} failed: {result}")
             return
         if lifecycle in ("INTERNAL_ERROR", "SKIPPED"):
-            raise RuntimeError(f"Notebook {notebook_path} lifecycle: {lifecycle}")
+            state_msg = state.get("state_message", "no details")
+            logger.error("Notebook failed — state: %s, message: %s", lifecycle, state_msg)
+            raise RuntimeError(f"Notebook {notebook_path} lifecycle: {lifecycle} — {state_msg}")
 
         time.sleep(_POLL_INTERVAL)
         elapsed += _POLL_INTERVAL

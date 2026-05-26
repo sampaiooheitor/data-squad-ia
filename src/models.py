@@ -10,14 +10,18 @@ from pydantic import BaseModel
 # ---------------------------------------------------------------------------
 
 class DataDictColumn(BaseModel):
-    name: str
-    description: str
-    example: str
+    origem: str
+    tabela: str
+    campo: str
+    datatype: str
+    format_data: str = ""
+    descricao: str
+    indicador_sensivel: str = "N"  # "S" ou "N"
 
 
 class DataDictOutput(BaseModel):
     tema: str
-    table_name: str
+    table_name: str  # igual ao campo "tabela" de todas as colunas
     description: str
     columns: list[DataDictColumn]
 
@@ -75,6 +79,7 @@ class RunContext:
     run_id: str = field(default_factory=lambda: str(uuid.uuid4())[:8])
     tema: str = ""
     csv_content: str = ""
+    csv_dbfs_path: str = ""
     data_dict: DataDictOutput | None = None
     schema: SchemaOutput | None = None
     dq_rules: DQRulesOutput | None = None

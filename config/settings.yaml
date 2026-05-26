@@ -11,6 +11,7 @@ data_generator:
     - marketing
 
 pipeline:
-  bronze_table_prefix: "bronze"
-  silver_table_prefix: "silver"
+  catalog: "prd"
+  bronze_schema: "bronze"
+  silver_schema: "silver"
   databricks_notebook_base_path: "/data_squad"

@@ -3,10 +3,13 @@
 import asyncio
 import copy
 import logging
+import os
 import time
 
 from dotenv import load_dotenv
 load_dotenv()
+
+_SKIP_PLAYWRIGHT = os.getenv("SKIP_PLAYWRIGHT", "false").lower() == "true"
 
 from src.agents import (
     data_generator,
@@ -41,11 +44,15 @@ async def run_pipeline() -> RunContext:
 
     # ── Phase 1b: Submit to Google Form ──────────────────────────────────
     loop = asyncio.get_event_loop()
-    ctx, timings["playwright"] = await _timed_sync(loop, playwright_runner.submit_form, ctx)
-    logger.info("[2/7] Form submitted via Playwright")
+    if _SKIP_PLAYWRIGHT:
+        logger.info("[2/7] Playwright skipped — triggered by Google Forms")
+    else:
+        ctx, timings["playwright"] = await _timed_sync(loop, playwright_runner.submit_form, ctx)
+        logger.info("[2/7] Form submitted via Playwright")
 
-    # ── Phase 1c: Sheets Reader skipped (Google ADC scope blocked by org policy)
-    logger.info("[3/7] Sheets Reader skipped — CSV already in memory")
+    # ── Phase 1c: Upload CSV to DBFS ─────────────────────────────────────
+    ctx, timings["upload_csv"] = await _timed_sync(loop, databricks_client.upload_csv, ctx)
+    logger.info("[3/7] CSV uploaded to DBFS — %s", ctx.csv_dbfs_path)
 
     # ── Phase 2: Schema inference ─────────────────────────────────────────
     ctx, timings["schema_agent"] = await _timed(schema_agent.run, ctx)

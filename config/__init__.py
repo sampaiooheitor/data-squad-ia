@@ -15,7 +15,6 @@ class Settings(BaseSettings):
     github_repo: str = ""
     databricks_host: str = ""
     databricks_token: str = ""
-    databricks_cluster_id: str = ""
     slack_webhook_url: str = ""
 
 

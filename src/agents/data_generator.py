@@ -22,20 +22,28 @@ async def run(ctx: RunContext) -> RunContext:
     response = _client.messages.create(
         model=settings.claude_model,
         max_tokens=16000,
-        system="""You are a data generation expert. Return ONLY valid JSON with no markdown fences.
+        system="""You are a data engineering expert. Return ONLY valid JSON with no markdown fences.
 The JSON must have exactly these top-level fields:
-- tema: string
-- table_name: string (snake_case, related to the tema)
-- description: string (one sentence describing the table)
-- columns: list of objects with {name, description, example}
-- csv_data: string (full CSV with header row and the requested number of rows, using comma separator)
+- tema: string (the business area)
+- table_name: string (UPPERCASE, format TB + ORIGIN_CODE + _ + SUBJECT, e.g. TBCIAR_CLIENTES)
+- description: string (one sentence describing the table in Portuguese)
+- columns: list of objects with exactly these fields:
+    - origem: string (short source system code, uppercase, e.g. "SEC", "CRM", "ERP")
+    - tabela: string (same as table_name above, repeated for every column)
+    - campo: string (column name in UPPERCASE with prefix, e.g. NM_CLIENTE, VL_TRANSACAO, DT_NASCIMENTO, CD_PRODUTO, ID_PEDIDO, FL_ATIVO)
+    - datatype: string (SQL type: STRING, INTEGER, DECIMAL(15,2), DATE, TIMESTAMP, BOOLEAN)
+    - format_data: string (only for DATE/TIMESTAMP: "YYYY-MM-DD" or "YYYY-MM-DD HH:MM:SS", else empty string)
+    - descricao: string (column description in Portuguese)
+    - indicador_sensivel: string ("S" if PII/sensitive, "N" otherwise)
+- csv_data: string (full CSV with header row using the campo names, and the requested number of rows)
 
 Rules:
-- Include 5-8 columns relevant to the business area
-- Include at least one PII-like column (email, cpf, phone, nome_completo)
-- All data must be fictional — no real names, no real CPFs
-- CPFs: use format XXX.XXX.XXX-XX with fictional numbers
-- CSV must not contain commas inside field values (use semicolons if needed inside text)""",
+- Include 5-8 columns
+- At least one column with indicador_sensivel = "S" (CPF, email, nome, salario)
+- All data must be fictional — no real CPFs, no real names
+- CPF format: XXX.XXX.XXX-XX
+- CSV separator: pipe (|) to avoid conflicts with commas in values
+- CSV must not have line breaks inside field values""",
         messages=[
             {
                 "role": "user",

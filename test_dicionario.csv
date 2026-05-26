@@ -1,0 +1,9 @@
+Origem|Tabela|Campo|Datatype|Format Data|Descricao|Indicador Sensivel
+FIN|TBFIN_LANCAMENTOS|ID_LANCAMENTO|BIGINT||Identificador único do lançamento|N
+FIN|TBFIN_LANCAMENTOS|DT_LANCAMENTO|DATE|yyyy-MM-dd|Data do lançamento financeiro|N
+FIN|TBFIN_LANCAMENTOS|VL_LANCAMENTO|DECIMAL||Valor do lançamento em reais|N
+FIN|TBFIN_LANCAMENTOS|CD_CENTRO_CUSTO|STRING||Código do centro de custo|N
+FIN|TBFIN_LANCAMENTOS|NM_FORNECEDOR|STRING||Nome do fornecedor|S
+FIN|TBFIN_LANCAMENTOS|NR_CPF_CNPJ|STRING||CPF ou CNPJ do fornecedor|S
+FIN|TBFIN_LANCAMENTOS|DS_HISTORICO|STRING||Descrição do histórico do lançamento|N
+FIN|TBFIN_LANCAMENTOS|CD_STATUS|STRING||Status do lançamento (PENDENTE, APROVADO, CANCELADO)|N

@@ -29,7 +29,7 @@ Type mapping rules:
 - Everything else → "string"
 
 Nullability: if ANY value in the column is empty string or blank, nullable = true.
-Primary key: column named "id" or ending in "_id" with all unique values → is_pk = true.""",
+Primary key: column starting with "ID_" or ending in "_ID" or named exactly "id" with all unique values → is_pk = true.""",
         messages=[
             {
                 "role": "user",
