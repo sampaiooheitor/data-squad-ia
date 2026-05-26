@@ -1,0 +1,51 @@
+ID_PEDIDO|NM_CLIENTE|CD_CPF|NM_PRODUTO|CD_CATEGORIA|VL_TOTAL|DT_PEDIDO|FL_STATUS
+1001|Ana Paula Ferreira|312.654.789-01|Smartphone Samsung Galaxy A54|Eletrônicos|1899.90|2024-01-03|ENTREGUE
+1002|Carlos Eduardo Mendes|045.321.678-90|Tênis Nike Air Max|Calçados|459.90|2024-01-04|ENTREGUE
+1003|Juliana Rocha Souza|789.012.345-67|Livro Clean Code|Livros|89.90|2024-01-05|ENTREGUE
+1004|Marcos Vinicius Lima|234.567.890-12|Fone de Ouvido JBL Tune 510BT|Eletrônicos|219.90|2024-01-06|ENTREGUE
+1005|Fernanda Costa Alves|567.890.123-45|Blusa de Moletom Feminina|Roupas|129.90|2024-01-07|CANCELADO
+1006|Roberto Nascimento|890.123.456-78|Notebook Dell Inspiron 15|Eletrônicos|3499.00|2024-01-08|ENTREGUE
+1007|Patrícia Oliveira|123.456.789-00|Panela de Pressão Elétrica|Eletrodomésticos|349.90|2024-01-09|ENTREGUE
+1008|Diego Henrique Barros|456.789.012-34|Câmera Canon EOS Rebel|Eletrônicos|2799.00|2024-01-10|EM_TRANSITO
+1009|Camila Martins Pires|678.901.234-56|Perfume Importado Dior|Beleza|650.00|2024-01-11|ENTREGUE
+1010|Thiago Almeida Santos|901.234.567-89|Mochila Escolar Adidas|Acessórios|199.90|2024-01-12|ENTREGUE
+1011|Larissa Gonçalves|234.890.567-01|Smart TV LG 50 polegadas|Eletrônicos|2199.00|2024-01-13|APROVADO
+1012|Felipe Cardoso Melo|567.123.890-23|Cadeira Gamer ThunderX3|Móveis|1299.00|2024-01-14|EM_TRANSITO
+1013|Bruna Teixeira Ramos|890.456.123-45|Kit Skincare Neutrogena|Beleza|189.90|2024-01-15|ENTREGUE
+1014|Anderson Costa Vieira|123.789.456-67|Calça Jeans Slim Fit|Roupas|219.90|2024-01-16|ENTREGUE
+1015|Gabriela Moura Dias|456.012.789-89|Aspirador de Pó Robô iRobot|Eletrodomésticos|1599.00|2024-01-17|CANCELADO
+1016|Leandro Pereira Cruz|789.345.012-01|Tablet iPad 9ª Geração|Eletrônicos|2999.00|2024-01-18|ENTREGUE
+1017|Vanessa Ribeiro Leal|012.678.345-23|Tênis Adidas Ultraboost|Calçados|599.90|2024-01-19|ENTREGUE
+1018|Renato Campos Borges|345.901.678-45|Livro Sapiens Yuval Harari|Livros|59.90|2024-01-20|ENTREGUE
+1019|Aline Ferraz Cunha|678.234.901-67|Mala de Viagem Samsonite|Acessórios|899.00|2024-01-21|EM_TRANSITO
+1020|Gustavo Machado|901.567.234-89|Monitor Gamer AOC 24 pol|Eletrônicos|1349.00|2024-01-22|APROVADO
+1021|Tatiana Nunes Freitas|234.001.567-12|Vestido Longo Floral|Roupas|179.90|2024-01-23|ENTREGUE
+1022|Marcelo Araújo Lima|567.234.001-34|Liquidificador Mondial|Eletrodomésticos|149.90|2024-01-24|ENTREGUE
+1023|Cristiane Duarte|890.567.234-56|Perfume Carolina Herrera 212|Beleza|420.00|2024-01-25|CANCELADO
+1024|Paulo Sérgio Moraes|123.890.567-78|Teclado Mecânico Redragon|Eletrônicos|349.00|2024-01-26|ENTREGUE
+1025|Elaine Correia Vilas|456.123.890-90|Bermuda Masculina Surf|Roupas|99.90|2024-01-27|ENTREGUE
+1026|Rodrigo Fonseca Lopes|789.456.123-12|Livro O Poder do Hábito|Livros|49.90|2024-01-28|ENTREGUE
+1027|Simone Batista Queiroz|012.789.456-34|Air Fryer Mondial 4L|Eletrodomésticos|399.00|2024-01-29|EM_TRANSITO
+1028|Márcio Tavares|345.012.789-56|Mouse Logitech MX Master 3|Eletrônicos|529.00|2024-01-30|ENTREGUE
+1029|Adriana Lemos Pinto|678.345.012-78|Bolsa Couro Feminina|Acessórios|349.90|2024-02-01|ENTREGUE
+1030|Sandro Cavalcante|901.678.345-90|Camiseta Polo Ralph Lauren|Roupas|259.90|2024-02-02|APROVADO
+1031|Karina Mendonça|234.901.678-01|Câmera GoPro Hero 11|Eletrônicos|1899.00|2024-02-03|ENTREGUE
+1032|Vinícius Soares|567.234.901-23|Suplemento Whey Protein 2kg|Saúde|189.90|2024-02-04|ENTREGUE
+1033|Luciana Figueiredo|890.567.234-45|Livro Mindset Carol Dweck|Livros|44.90|2024-02-05|CANCELADO
+1034|Caio Brandão|123.890.567-67|Cafeteira Nespresso Essenza|Eletrodomésticos|699.00|2024-02-06|ENTREGUE
+1035|Natália Rocha|456.123.890-89|Vestido Midi Estampado|Roupas|149.90|2024-02-07|ENTREGUE
+1036|Bruno Magalhães|789.456.123-01|PlayStation 5 Sony|Eletrônicos|4499.00|2024-02-08|EM_TRANSITO
+1037|Helena Castro Neves|012.789.456-23|Tênis Puma RS-X|Calçados|399.90|2024-02-09|ENTREGUE
+1038|Otávio Silveira|345.012.789-45|Fritadeira Elétrica Philco|Eletrodomésticos|279.90|2024-02-10|ENTREGUE
+1039|Juliana Paixão Neto|678.345.012-67|Kit Maquiagem Maybelline|Beleza|219.90|2024-02-11|APROVADO
+1040|Daniel Nogueira|901.678.345-89|Livro Atomic Habits|Livros|54.90|2024-02-12|ENTREGUE
+1041|Priscila Azevedo|234.901.678-01|Smartwatch Xiaomi Mi Band 8|Eletrônicos|349.00|2024-02-13|ENTREGUE
+1042|Rafael Torres Saraiva|567.234.901-23|Shorts Academia Masculino|Roupas|79.90|2024-02-14|CANCELADO
+1043|Isabela Meireles|890.567.234-45|Mochila Feminina Couro|Acessórios|289.90|2024-02-15|ENTREGUE
+1044|Leonardo Prado|123.890.567-67|Notebook Lenovo IdeaPad|Eletrônicos|3199.00|2024-02-16|EM_TRANSITO
+1045|Mônica Freire|456.123.890-89|Protetor Solar Isdin FPS 60|Beleza|129.90|2024-02-17|ENTREGUE
+1046|Guilherme Assis|789.456.123-01|Caixinha de Som JBL Go 3|Eletrônicos|249.00|2024-02-18|ENTREGUE
+1047|Débora Mesquita|012.789.456-23|Calça Legging Academia|Roupas|89.90|2024-02-19|ENTREGUE
+1048|Maurício Vasconcelos|345.012.789-45|Livro A Arte da Guerra|Livros|34.90|2024-02-20|APROVADO
+1049|Letícia Drummond|678.345.012-67|Suporte Ergonômico Notebook|Acessórios|159.90|2024-02-21|ENTREGUE
+1050|Alexandre Cunha|901.678.345-89|Xbox Series S Microsoft|Eletrônicos|2799.00|2024-02-22|ENTREGUE
