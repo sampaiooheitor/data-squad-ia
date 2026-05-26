@@ -99,6 +99,9 @@ casting_block: Cast each column from StringType (as read from Bronze) to its cor
 dq_block: Split df into df_clean and df_rejected using error-severity DQ rules.
   Rows passing all conditions → df_clean.
   Rows failing → df_rejected with column _dq_error.
+  IMPORTANT: Use ONLY simple column-level conditions — isNotNull(), >, <, ==, isin(), rlike().
+  NEVER use window functions, groupBy, intermediate withColumn, or multi-step computations.
+  NEVER reference a column you did not read from the original df.
   Example:
     error_cond = (F.col("X").isNotNull()) & (F.col("Y") > 0)
     df_clean    = df.filter(error_cond)
