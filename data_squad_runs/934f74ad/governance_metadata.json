@@ -1,0 +1,60 @@
+{
+  "columns": [
+    {
+      "name": "ID_FUNCIONARIO",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "RH",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "NM_FUNCIONARIO",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "RH",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "CD_CPF",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "RH",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "DT_ADMISSAO",
+      "pii": true,
+      "sensitivity": "confidential",
+      "owner": "RH",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "NM_CARGO",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "RH",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "NM_DEPARTAMENTO",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "RH",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "VL_SALARIO",
+      "pii": false,
+      "sensitivity": "confidential",
+      "owner": "RH",
+      "masking_strategy": "encrypt"
+    },
+    {
+      "name": "FL_ATIVO",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "RH",
+      "masking_strategy": "none"
+    }
+  ]
+}
