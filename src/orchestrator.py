@@ -10,6 +10,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 _SKIP_PLAYWRIGHT = os.getenv("SKIP_PLAYWRIGHT", "false").lower() == "true"
+_INPUT_DICT_CSV   = os.getenv("INPUT_DICT_CSV", "").strip()
+_INPUT_TABLE_NAME = os.getenv("INPUT_TABLE_NAME", "").strip()
+_INPUT_TEMA       = os.getenv("INPUT_TEMA", "").strip()
 
 from src.agents import (
     data_generator,
@@ -39,8 +42,12 @@ async def run_pipeline() -> RunContext:
     logger.info("=" * 60)
 
     # ── Phase 1: Generate data ────────────────────────────────────────────
-    ctx, timings["data_generator"] = await _timed(data_generator.run, ctx)
-    logger.info("[1/7] Data generated — tema=%s, table=%s", ctx.tema, ctx.data_dict.table_name if ctx.data_dict else "?")
+    if _INPUT_DICT_CSV:
+        ctx = await data_generator.run_from_dict(ctx, _INPUT_DICT_CSV, _INPUT_TABLE_NAME, _INPUT_TEMA)
+        logger.info("[1/7] Dictionary loaded from form — table=%s", ctx.data_dict.table_name if ctx.data_dict else "?")
+    else:
+        ctx, timings["data_generator"] = await _timed(data_generator.run, ctx)
+        logger.info("[1/7] Data generated — tema=%s, table=%s", ctx.tema, ctx.data_dict.table_name if ctx.data_dict else "?")
 
     # ── Phase 1b: Submit to Google Form ──────────────────────────────────
     loop = asyncio.get_event_loop()
