@@ -1,0 +1,79 @@
+{
+  "tema": "unknown",
+  "table_name": "TBFIN_LANCAMENTOS",
+  "description": "Tabela TBFIN_LANCAMENTOS carregada via dicionário do formulário.",
+  "columns": [
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_LANCAMENTOS",
+      "campo": "ID_LANCAMENTO",
+      "datatype": "BIGINT",
+      "format_data": "",
+      "descricao": "Identificador único do lançamento",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_LANCAMENTOS",
+      "campo": "DT_LANCAMENTO",
+      "datatype": "DATE",
+      "format_data": "yyyy-MM-dd",
+      "descricao": "Data do lançamento financeiro",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_LANCAMENTOS",
+      "campo": "VL_LANCAMENTO",
+      "datatype": "DECIMAL",
+      "format_data": "",
+      "descricao": "Valor do lançamento em reais",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_LANCAMENTOS",
+      "campo": "CD_CENTRO_CUSTO",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Código do centro de custo",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_LANCAMENTOS",
+      "campo": "NM_FORNECEDOR",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Nome do fornecedor",
+      "indicador_sensivel": "S"
+    },
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_LANCAMENTOS",
+      "campo": "NR_CPF_CNPJ",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "CPF ou CNPJ do fornecedor",
+      "indicador_sensivel": "S"
+    },
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_LANCAMENTOS",
+      "campo": "DS_HISTORICO",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Descrição do histórico do lançamento",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_LANCAMENTOS",
+      "campo": "CD_STATUS",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Status do lançamento (PENDENTE, APROVADO, CANCELADO)",
+      "indicador_sensivel": "N"
+    }
+  ]
+}
