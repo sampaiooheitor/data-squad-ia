@@ -1,0 +1,112 @@
+{
+  "rules": [
+    {
+      "column": "ID_PEDIDO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "ID_PEDIDO",
+      "rule_type": "unique",
+      "expression": "COUNT(DISTINCT value) = COUNT(value)",
+      "severity": "error"
+    },
+    {
+      "column": "ID_PEDIDO",
+      "rule_type": "range",
+      "expression": "value BETWEEN 1 AND 2147483647",
+      "severity": "error"
+    },
+    {
+      "column": "NM_CLIENTE",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "NM_CLIENTE",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^[A-Za-zÀ-ÖØ-öø-ÿ\\s]{2,100}$'",
+      "severity": "warning"
+    },
+    {
+      "column": "CD_CPF",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "CD_CPF",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$'",
+      "severity": "error"
+    },
+    {
+      "column": "CD_CPF",
+      "rule_type": "unique",
+      "expression": "COUNT(DISTINCT value) = COUNT(value)",
+      "severity": "warning"
+    },
+    {
+      "column": "NM_PRODUTO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "NM_PRODUTO",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^.{2,200}$'",
+      "severity": "warning"
+    },
+    {
+      "column": "CD_CATEGORIA",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "CD_CATEGORIA",
+      "rule_type": "referential",
+      "expression": "value IN ('ELETRONICOS', 'VESTUARIO', 'ALIMENTOS', 'MOVEIS', 'BELEZA', 'ESPORTES', 'LIVROS', 'OUTROS')",
+      "severity": "warning"
+    },
+    {
+      "column": "VL_TOTAL",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "VL_TOTAL",
+      "rule_type": "range",
+      "expression": "value BETWEEN 0.01 AND 999999.99",
+      "severity": "error"
+    },
+    {
+      "column": "DT_PEDIDO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "DT_PEDIDO",
+      "rule_type": "range",
+      "expression": "value BETWEEN '2000-01-01' AND CURRENT_DATE",
+      "severity": "error"
+    },
+    {
+      "column": "FL_STATUS",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "FL_STATUS",
+      "rule_type": "referential",
+      "expression": "value IN ('PENDENTE', 'APROVADO', 'ENVIADO', 'ENTREGUE', 'CANCELADO', 'DEVOLVIDO')",
+      "severity": "error"
+    }
+  ]
+}
