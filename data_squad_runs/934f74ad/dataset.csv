@@ -1,0 +1,51 @@
+ID_FUNCIONARIO|NM_FUNCIONARIO|CD_CPF|DT_ADMISSAO|NM_CARGO|NM_DEPARTAMENTO|VL_SALARIO|FL_ATIVO
+1001|Ana Paula Ferreira|312.456.789-01|2018-03-12|Analista de RH|Recursos Humanos|4800.00|true
+1002|Carlos Eduardo Souza|423.567.890-12|2019-07-22|Desenvolvedor Sênior|Tecnologia da Informação|9500.00|true
+1003|Mariana Costa Lima|534.678.901-23|2020-01-15|Assistente Financeiro|Financeiro|3200.00|true
+1004|Roberto Alves Nunes|645.789.012-34|2017-11-08|Gerente Comercial|Comercial|12000.00|true
+1005|Juliana Martins Rocha|756.890.123-45|2021-05-03|Analista de Marketing|Marketing|5600.00|true
+1006|Fernando Gomes Dias|867.901.234-56|2016-09-19|Coordenador de TI|Tecnologia da Informação|11000.00|true
+1007|Beatriz Oliveira Pinto|978.012.345-67|2022-02-28|Estagiária Administrativa|Administrativo|1500.00|true
+1008|Gustavo Henrique Melo|089.123.456-78|2015-06-30|Diretor Financeiro|Financeiro|25000.00|true
+1009|Larissa Pereira Santos|190.234.567-89|2023-04-10|Recrutadora|Recursos Humanos|4200.00|true
+1010|Thiago Barbosa Cunha|201.345.678-90|2014-12-01|Arquiteto de Software|Tecnologia da Informação|14000.00|true
+1011|Patricia Nascimento Silva|312.456.789-02|2019-08-14|Analista Contábil|Financeiro|5100.00|true
+1012|Rodrigo Cavalcante Freitas|423.567.890-13|2020-10-20|Vendedor Externo|Comercial|3800.00|true
+1013|Camila Teixeira Borges|534.678.901-24|2018-04-05|Designer Gráfico|Marketing|4600.00|false
+1014|Eduardo Lopes Carvalho|645.789.012-35|2021-11-17|Analista de Suporte|Tecnologia da Informação|4900.00|true
+1015|Vanessa Ribeiro Monteiro|756.890.123-46|2017-02-23|Gerente de RH|Recursos Humanos|13500.00|true
+1016|Diego Almeida Cardoso|867.901.234-57|2022-06-09|Assistente de Marketing|Marketing|2900.00|true
+1017|Renata Figueiredo Castro|978.012.345-68|2016-03-14|Analista de Negócios|Comercial|6700.00|true
+1018|Leonardo Ramos Vieira|089.123.456-79|2013-07-08|Gerente de TI|Tecnologia da Informação|18000.00|true
+1019|Aline Duarte Moreira|190.234.567-90|2020-09-01|Assistente de RH|Recursos Humanos|2700.00|true
+1020|Marcelo Correia Andrade|201.345.679-01|2019-01-25|Analista de Dados|Tecnologia da Informação|7800.00|true
+1021|Simone Barros Nogueira|312.456.790-03|2015-10-30|Especialista Fiscal|Financeiro|8200.00|true
+1022|Bruno Siqueira Azevedo|423.567.891-14|2023-03-07|Desenvolvedor Júnior|Tecnologia da Informação|4500.00|true
+1023|Fernanda Coelho Peixoto|534.678.902-25|2018-08-19|Coordenadora de Marketing|Marketing|10500.00|false
+1024|Alex Saito Yamamoto|645.789.013-36|2017-05-11|Analista de Sistemas|Tecnologia da Informação|7200.00|true
+1025|Isabela Mendes Farias|756.890.124-47|2021-12-22|Consultora de Vendas|Comercial|5500.00|true
+1026|Paulo Henrique Leite|867.901.235-58|2014-04-16|Gerente Administrativo|Administrativo|14500.00|true
+1027|Tatiane Moura Campos|978.012.346-69|2022-09-05|Analista de Qualidade|Qualidade|5300.00|true
+1028|Vinicius Tavares Batista|089.123.457-80|2016-11-28|Técnico de Suporte|Tecnologia da Informação|3600.00|true
+1029|Amanda Fonseca Guimarães|190.234.568-91|2020-03-18|Assistente Comercial|Comercial|2800.00|true
+1030|Daniel Aragão Lustosa|201.345.680-02|2019-06-04|Engenheiro de Dados|Tecnologia da Informação|11500.00|true
+1031|Karina Luz Evangelista|312.456.791-04|2023-01-16|Analista de RH|Recursos Humanos|4100.00|true
+1032|Henrique Medeiros Prado|423.567.892-15|2015-08-22|Controller Financeiro|Financeiro|13000.00|true
+1033|Luciana Queiroz Amorim|534.678.903-26|2018-02-09|Supervisora de Vendas|Comercial|8800.00|false
+1034|Rafael Torres Sampaio|645.789.014-37|2021-07-14|Analista de Infraestrutura|Tecnologia da Informação|6900.00|true
+1035|Priscila Vasconcelos Muniz|756.890.125-48|2017-09-03|Gerente de Qualidade|Qualidade|15000.00|true
+1036|Flavio Santana Rezende|867.901.236-59|2013-05-20|Diretor de TI|Tecnologia da Informação|32000.00|true
+1037|Natalia Braga Ferraz|978.012.347-70|2022-04-11|Analista Financeiro|Financeiro|5700.00|true
+1038|Jefferson Lima Coutinho|089.123.458-81|2016-01-07|Representante Comercial|Comercial|4300.00|true
+1039|Claudia Macedo Vilarinho|190.234.569-92|2019-11-29|Analista de Projetos|Administrativo|6400.00|true
+1040|Andre Rocha Esteves|201.345.681-03|2020-07-23|Desenvolvedor Pleno|Tecnologia da Informação|7500.00|true
+1041|Elaine Tosta Pacheco|312.456.792-05|2014-09-15|Coordenadora Financeira|Financeiro|11800.00|false
+1042|Fabio Carmo Vilela|423.567.893-16|2021-02-01|Analista de Segurança|Tecnologia da Informação|8600.00|true
+1043|Graziela Pompeo Assis|534.678.904-27|2018-06-17|Assistente de Qualidade|Qualidade|2600.00|true
+1044|Marcos Aurélio Bittencourt|645.789.015-38|2023-07-04|Estagiário de TI|Tecnologia da Informação|1400.00|true
+1045|Tania Cristina Pinheiro|756.890.126-49|2015-03-11|Analista de Compliance|Administrativo|7100.00|true
+1046|Leandro Bastos Maciel|867.901.237-60|2017-10-26|Supervisor de RH|Recursos Humanos|9200.00|true
+1047|Miriam Lacerda Fontes|978.012.348-71|2022-12-08|Analista de Marketing Digital|Marketing|5900.00|true
+1048|Otavio Neri Galvao|089.123.459-82|2016-08-03|Analista de Processos|Qualidade|5400.00|false
+1049|Sandra Belo Cavalcanti|190.234.570-93|2019-04-22|Gerente de Marketing|Marketing|16000.00|true
+1050|Thales Drummond Pinheiro|201.345.682-04|2020-12-14|Scrum Master|Tecnologia da Informação|10200.00|true
