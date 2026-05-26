@@ -1,0 +1,50 @@
+name: Data Squad Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      table_name:
+        description: "Nome da tabela (extraído do dicionário)"
+        required: false
+        default: ""
+      tema:
+        description: "Área de negócio (do form)"
+        required: false
+        default: ""
+      dict_csv:
+        description: "Conteúdo do dicionário de dados preenchido (pipe-separated)"
+        required: false
+        default: ""
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -e .
+
+      - name: Run Data Squad
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          GOOGLE_FORM_URL: ${{ secrets.GOOGLE_FORM_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPO: ${{ github.repository }}
+          SKIP_PLAYWRIGHT: "true"
+          INPUT_TABLE_NAME: ${{ inputs.table_name }}
+          INPUT_TEMA: ${{ inputs.tema }}
+          INPUT_DICT_CSV: ${{ inputs.dict_csv }}
+        run: python -m src.orchestrator
