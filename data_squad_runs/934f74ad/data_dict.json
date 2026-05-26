@@ -1,0 +1,79 @@
+{
+  "tema": "Recursos Humanos",
+  "table_name": "TBRH_FUNCIONARIOS",
+  "description": "Tabela que armazena informações cadastrais e funcionais dos funcionários da organização.",
+  "columns": [
+    {
+      "origem": "RH",
+      "tabela": "TBRH_FUNCIONARIOS",
+      "campo": "ID_FUNCIONARIO",
+      "datatype": "INTEGER",
+      "format_data": "",
+      "descricao": "Identificador único do funcionário",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "RH",
+      "tabela": "TBRH_FUNCIONARIOS",
+      "campo": "NM_FUNCIONARIO",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Nome completo do funcionário",
+      "indicador_sensivel": "S"
+    },
+    {
+      "origem": "RH",
+      "tabela": "TBRH_FUNCIONARIOS",
+      "campo": "CD_CPF",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "CPF do funcionário no formato XXX.XXX.XXX-XX",
+      "indicador_sensivel": "S"
+    },
+    {
+      "origem": "RH",
+      "tabela": "TBRH_FUNCIONARIOS",
+      "campo": "DT_ADMISSAO",
+      "datatype": "DATE",
+      "format_data": "YYYY-MM-DD",
+      "descricao": "Data de admissão do funcionário na empresa",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "RH",
+      "tabela": "TBRH_FUNCIONARIOS",
+      "campo": "NM_CARGO",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Cargo ou função exercida pelo funcionário",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "RH",
+      "tabela": "TBRH_FUNCIONARIOS",
+      "campo": "NM_DEPARTAMENTO",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Departamento ao qual o funcionário está vinculado",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "RH",
+      "tabela": "TBRH_FUNCIONARIOS",
+      "campo": "VL_SALARIO",
+      "datatype": "DECIMAL(15,2)",
+      "format_data": "",
+      "descricao": "Salário bruto mensal do funcionário",
+      "indicador_sensivel": "S"
+    },
+    {
+      "origem": "RH",
+      "tabela": "TBRH_FUNCIONARIOS",
+      "campo": "FL_ATIVO",
+      "datatype": "BOOLEAN",
+      "format_data": "",
+      "descricao": "Indicador se o funcionário está ativo na empresa",
+      "indicador_sensivel": "N"
+    }
+  ]
+}
