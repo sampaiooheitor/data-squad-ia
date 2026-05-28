@@ -22,7 +22,12 @@ function onFormSubmit(e) {
       var urls = Array.isArray(answer) ? answer : [answer];
       fileUrl = urls[0];
     } else if (title === "CSV Data") {
-      sampleCsv = answer ? answer.toString().trim() : "";
+      var sampleUrls = Array.isArray(answer) ? answer : [answer];
+      if (sampleUrls && sampleUrls[0]) {
+        var sampleFileId = extractFileId(sampleUrls[0]);
+        var sampleFile = DriveApp.getFileById(sampleFileId);
+        sampleCsv = sampleFile.getBlob().getDataAsString("UTF-8").trim();
+      }
     }
   }
 
