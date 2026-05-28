@@ -43,6 +43,8 @@ async def run_pipeline() -> RunContext:
     logger.info("=" * 60)
 
     # ── Phase 1: Generate data ────────────────────────────────────────────
+    logger.info("DEBUG sample_csv — len=%d, lines=%d, preview=%r",
+                len(_INPUT_SAMPLE_CSV), len(_INPUT_SAMPLE_CSV.splitlines()), _INPUT_SAMPLE_CSV[:120])
     if _INPUT_DICT_CSV:
         ctx = await data_generator.run_from_dict(ctx, _INPUT_DICT_CSV, _INPUT_TABLE_NAME, _INPUT_TEMA, _INPUT_SAMPLE_CSV)
         logger.info("[1/7] Dictionary loaded from form — table=%s, sample=%s",
