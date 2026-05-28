@@ -1,0 +1,70 @@
+{
+  "rules": [
+    {
+      "column": "ID_LANCAMENTO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "ID_LANCAMENTO",
+      "rule_type": "unique",
+      "expression": "COUNT(DISTINCT value) = COUNT(value)",
+      "severity": "error"
+    },
+    {
+      "column": "DT_LANCAMENTO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "DT_LANCAMENTO",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$'",
+      "severity": "error"
+    },
+    {
+      "column": "DT_LANCAMENTO",
+      "rule_type": "range",
+      "expression": "value BETWEEN '2000-01-01' AND CURRENT_DATE",
+      "severity": "warning"
+    },
+    {
+      "column": "VL_LANCAMENTO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "VL_LANCAMENTO",
+      "rule_type": "range",
+      "expression": "value BETWEEN -1000000.00 AND 1000000.00",
+      "severity": "warning"
+    },
+    {
+      "column": "VL_LANCAMENTO",
+      "rule_type": "range",
+      "expression": "value <> 0",
+      "severity": "warning"
+    },
+    {
+      "column": "NM_FORNECEDOR",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "NM_FORNECEDOR",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^[\\p{L}0-9\\s\\-\\.\\&]{2,255}$'",
+      "severity": "warning"
+    },
+    {
+      "column": "NM_FORNECEDOR",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^\\s*(\\S+.*\\S+|\\S+)\\s*$'",
+      "severity": "error"
+    }
+  ]
+}
