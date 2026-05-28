@@ -67,8 +67,8 @@ total = df.count()
 # Masking
 {masking_block}
 
-df_clean.write.format("delta").mode("overwrite").saveAsTable(SILVER_TABLE)
-df_rejected.write.format("delta").mode("overwrite").saveAsTable(REJECTED_TABLE)
+df_clean.write.format("delta").mode("overwrite").option("overwriteSchema", "true").saveAsTable(SILVER_TABLE)
+df_rejected.write.format("delta").mode("overwrite").option("overwriteSchema", "true").saveAsTable(REJECTED_TABLE)
 print(f"Silver: {{df_clean.count()}} accepted, {{df_rejected.count()}} rejected / {{total}} total")
 print(f"  Clean    -> {{SILVER_TABLE}}")
 print(f"  Rejected -> {{REJECTED_TABLE}}")
