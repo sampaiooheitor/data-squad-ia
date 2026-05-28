@@ -46,7 +46,8 @@ function onFormSubmit(e) {
     inputs: {
       table_name: tableName,
       tema: "",
-      dict_csv: dictCsv
+      dict_csv: dictCsv,
+      sample_csv: sampleCsv
     }
   });
 

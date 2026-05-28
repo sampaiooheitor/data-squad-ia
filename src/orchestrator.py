@@ -13,6 +13,7 @@ _SKIP_PLAYWRIGHT = os.getenv("SKIP_PLAYWRIGHT", "false").lower() == "true"
 _INPUT_DICT_CSV   = os.getenv("INPUT_DICT_CSV", "").strip()
 _INPUT_TABLE_NAME = os.getenv("INPUT_TABLE_NAME", "").strip()
 _INPUT_TEMA       = os.getenv("INPUT_TEMA", "").strip()
+_INPUT_SAMPLE_CSV = os.getenv("INPUT_SAMPLE_CSV", "").strip()
 
 from src.agents import (
     data_generator,
@@ -43,8 +44,10 @@ async def run_pipeline() -> RunContext:
 
     # ── Phase 1: Generate data ────────────────────────────────────────────
     if _INPUT_DICT_CSV:
-        ctx = await data_generator.run_from_dict(ctx, _INPUT_DICT_CSV, _INPUT_TABLE_NAME, _INPUT_TEMA)
-        logger.info("[1/7] Dictionary loaded from form — table=%s", ctx.data_dict.table_name if ctx.data_dict else "?")
+        ctx = await data_generator.run_from_dict(ctx, _INPUT_DICT_CSV, _INPUT_TABLE_NAME, _INPUT_TEMA, _INPUT_SAMPLE_CSV)
+        logger.info("[1/7] Dictionary loaded from form — table=%s, sample=%s",
+                    ctx.data_dict.table_name if ctx.data_dict else "?",
+                    "real" if _INPUT_SAMPLE_CSV else "synthetic")
     else:
         ctx, timings["data_generator"] = await _timed(data_generator.run, ctx)
         logger.info("[1/7] Data generated — tema=%s, table=%s", ctx.tema, ctx.data_dict.table_name if ctx.data_dict else "?")

@@ -40,10 +40,14 @@ def _parse_dict_csv(dict_csv: str, table_name: str, tema: str) -> DataDictOutput
     )
 
 
-async def run_from_dict(ctx: RunContext, dict_csv: str, table_name: str, tema: str) -> RunContext:
-    """Populate ctx from a form-provided dictionary, then generate synthetic CSV."""
+async def run_from_dict(ctx: RunContext, dict_csv: str, table_name: str, tema: str, sample_csv: str = "") -> RunContext:
+    """Populate ctx from a form-provided dictionary. Uses real sample if provided, else generates synthetic CSV."""
     ctx.data_dict = _parse_dict_csv(dict_csv, table_name, tema)
     ctx.tema = ctx.data_dict.tema
+
+    if sample_csv:
+        ctx.csv_content = sample_csv
+        return ctx
 
     num_rows = random.randint(_MIN_ROWS, min(_MAX_ROWS, 50))
     columns_desc = "\n".join(

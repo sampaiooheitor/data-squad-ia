@@ -15,6 +15,10 @@ on:
         description: "Conteúdo do dicionário de dados preenchido (pipe-separated)"
         required: false
         default: ""
+      sample_csv:
+        description: "Amostra de dados real enviada pelo usuário (CSV)"
+        required: false
+        default: ""
 
 jobs:
   run-pipeline:
@@ -50,4 +54,5 @@ jobs:
           INPUT_TABLE_NAME: ${{ inputs.table_name }}
           INPUT_TEMA: ${{ inputs.tema }}
           INPUT_DICT_CSV: ${{ inputs.dict_csv }}
+          INPUT_SAMPLE_CSV: ${{ inputs.sample_csv }}
         run: python -m src.orchestrator
