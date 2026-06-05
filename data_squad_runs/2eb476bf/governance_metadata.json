@@ -1,0 +1,60 @@
+{
+  "columns": [
+    {
+      "name": "order_id",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "TI",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "nome_completo",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "Comercial",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "email",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "Comercial",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "cpf",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "Juridico",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "produto",
+      "pii": false,
+      "sensitivity": "public",
+      "owner": "Comercial",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "categoria",
+      "pii": false,
+      "sensitivity": "public",
+      "owner": "Comercial",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "valor_total",
+      "pii": false,
+      "sensitivity": "confidential",
+      "owner": "Financeiro",
+      "masking_strategy": "encrypt"
+    },
+    {
+      "name": "status_pedido",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Comercial",
+      "masking_strategy": "none"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+order_id,nome_completo,email,cpf,produto,categoria,valor_total,status_pedido
+ORD-10001,João Pereira Silva,joao.silva@fictmail.com,382.917.645-01,Smartphone Galaxy X10,Eletrônicos,1299.90,Entregue
+ORD-10002,Mariana Costa Souza,mariana.costa@fictmail.com,741.258.963-02,Notebook Ultrafino Pro,Eletrônicos,3499.00,Entregue
+ORD-10003,Carlos Eduardo Lima,carlos.lima@fictmail.com,159.357.486-03,Tênis Running Speed,Esportes,289.90,Em trânsito
+ORD-10004,Ana Paula Ferreira,ana.ferreira@fictmail.com,246.813.579-04,Cafeteira Espresso Max,Eletrodomésticos,459.00,Entregue
+ORD-10005,Roberto Alves Mendes,roberto.mendes@fictmail.com,963.852.741-05,Livro: Gestão Moderna,Livros,59.90,Entregue
+ORD-10006,Fernanda Lima Torres,fernanda.torres@fictmail.com,357.159.268-06,Fone Bluetooth SoundX,Eletrônicos,199.90,Cancelado
+ORD-10007,Diego Martins Rocha,diego.rocha@fictmail.com,852.963.174-07,Cadeira Gamer ProSeat,Móveis,899.00,Entregue
+ORD-10008,Patrícia Nunes Barros,patricia.barros@fictmail.com,741.963.258-08,Mochila Executiva Top,Acessórios,149.90,Entregue
+ORD-10009,Lucas Henrique Costa,lucas.costa@fictmail.com,369.258.147-09,Monitor LED 24 Polegadas,Eletrônicos,799.00,Em trânsito
+ORD-10010,Juliana Ramos Figueiredo,juliana.figueiredo@fictmail.com,258.147.369-10,Livro: Python Avançado,Livros,89.90,Entregue
+ORD-10011,Anderson Souza Pinto,anderson.pinto@fictmail.com,147.369.258-11,Camiseta Esportiva Dry,Vestuário,79.90,Entregue
+ORD-10012,Camila Vieira Santos,camila.santos@fictmail.com,963.741.852-12,Panela Elétrica Smart,Eletrodomésticos,229.00,Devolvido
+ORD-10013,Thiago Oliveira Melo,thiago.melo@fictmail.com,852.741.963-13,Teclado Mecânico RGB,Eletrônicos,349.90,Entregue
+ORD-10014,Beatriz Carvalho Lopes,beatriz.lopes@fictmail.com,741.852.963-14,Perfume Floral Essence,Beleza,189.00,Entregue
+ORD-10015,Rafael Cunha Azevedo,rafael.azevedo@fictmail.com,369.741.852-15,Suplemento Whey Protein,Saúde,159.90,Em trânsito
+ORD-10016,Larissa Monteiro Reis,larissa.reis@fictmail.com,258.963.741-16,Smartwatch Fit Pro,Eletrônicos,599.00,Entregue
+ORD-10017,Gustavo Freitas Moura,gustavo.moura@fictmail.com,147.852.963-17,Jogo de Panelas Inox,Eletrodomésticos,319.00,Entregue
+ORD-10018,Aline Batista Correia,aline.correia@fictmail.com,963.258.741-18,Tênis Casual Urban,Esportes,199.90,Cancelado
+ORD-10019,Felipe Rodrigues Borges,felipe.borges@fictmail.com,852.369.741-19,Mesa de Escritório Oak,Móveis,749.00,Em trânsito
+ORD-10020,Vanessa Teixeira Almeida,vanessa.almeida@fictmail.com,741.258.963-20,Câmera DSLR PhotoPro,Eletrônicos,2899.00,Entregue
+ORD-10021,Rodrigo Nascimento Dias,rodrigo.dias@fictmail.com,369.852.741-21,Creme Hidratante Skin,Beleza,49.90,Entregue
+ORD-10022,Priscila Gomes Cardoso,priscila.cardoso@fictmail.com,258.741.963-22,Headset Gamer VoiceX,Eletrônicos,279.90,Entregue
+ORD-10023,Marcelo Araújo Fonseca,marcelo.fonseca@fictmail.com,147.963.852-23,Bicicleta Speed Carbon,Esportes,3199.00,Em trânsito
+ORD-10024,Tatiane Cruz Ribeiro,tatiane.ribeiro@fictmail.com,963.147.258-24,Livro: Finanças Pessoais,Livros,44.90,Entregue
+ORD-10025,Bruno Campos Tavares,bruno.tavares@fictmail.com,852.258.369-25,Liquidificador Power Blend,Eletrodomésticos,189.00,Devolvido
+ORD-10026,Simone Andrade Vasconcelos,simone.vasconcelos@fictmail.com,741.369.258-26,Calça Jeans Slim,Vestuário,129.90,Entregue
+ORD-10027,Leandro Pires Machado,leandro.machado@fictmail.com,369.963.741-27,Tablet Tab Ultra 10,Eletrônicos,1499.00,Entregue
+ORD-10028,Claudia Fernandes Moreira,claudia.moreira@fictmail.com,258.852.147-28,Vitamina C Effervescent,Saúde,29.90,Entregue
+ORD-10029,Fábio Sousa Carvalho,fabio.carvalho@fictmail.com,147.741.963-29,Mouse Ergonômico Wireless,Eletrônicos,129.90,Cancelado
+ORD-10030,Renata Luz Barbosa,renata.barbosa@fictmail.com,963.369.852-30,Sofá Retrátil Velvet,Móveis,2499.00,Em trânsito
+ORD-10031,Eduardo Paiva Henriques,eduardo.henriques@fictmail.com,852.147.369-31,Protetor Solar FPS 70,Beleza,39.90,Entregue
+ORD-10032,Michele Fontes Santana,michele.santana@fictmail.com,741.963.147-32,Kit Maquiagem ColorSet,Beleza,219.90,Entregue
+ORD-10033,Sérgio Duarte Cavalcanti,sergio.cavalcanti@fictmail.com,369.258.963-33,Impressora LaserJet Pro,Eletrônicos,849.00,Entregue
+ORD-10034,Alessandra Matos Queiroz,alessandra.queiroz@fictmail.com,258.369.852-34,Tênis Crossfit Force,Esportes,319.90,Em trânsito
+ORD-10035,Henrique Leal Magalhães,henrique.magalhaes@fictmail.com,147.258.741-35,Livro: Arquitetura de Software,Livros,74.90,Entregue
+ORD-10036,Daniela Vargas Nogueira,daniela.nogueira@fictmail.com,963.852.369-36,Air Fryer Digital 5L,Eletrodomésticos,399.00,Entregue
+ORD-10037,Marcos Pereira Brandão,marcos.brandao@fictmail.com,852.963.258-37,Regata Compressão Sport,Vestuário,59.90,Entregue
+ORD-10038,Nathalia Rocha Brito,nathalia.brito@fictmail.com,741.147.369-38,Relógio Analógico Clássico,Acessórios,299.00,Devolvido
+ORD-10039,Vinícius Albuquerque Lima,vinicius.lima@fictmail.com,369.741.963-39,SSD Externo 1TB SpeedDrive,Eletrônicos,389.00,Entregue
+ORD-10040,Isabela Faria Drummond,isabela.drummond@fictmail.com,258.963.852-40,Caderno Inteligente Smart,Papelaria,89.90,Entregue
+ORD-10041,Clayton Mendonça Torres,clayton.torres@fictmail.com,147.852.258-41,Speaker Bluetooth BassX,Eletrônicos,249.90,Em trânsito
+ORD-10042,Sabrina Lacerda Viana,sabrina.viana@fictmail.com,963.258.369-42,Óculos de Sol Polarizados,Acessórios,179.00,Entregue
+ORD-10043,Otávio Sampaio Figueira,otavio.figueira@fictmail.com,852.741.147-43,Proteína Vegana Green,Saúde,139.90,Entregue
+ORD-10044,Raquel Borges Medeiros,raquel.medeiros@fictmail.com,741.369.963-44,Estante Modular Prime,Móveis,599.00,Cancelado
+ORD-10045,Celso Neto Wanderley,celso.wanderley@fictmail.com,369.147.258-45,Placa de Vídeo GTX Ultra,Eletrônicos,1899.00,Em trânsito
+ORD-10046,Amanda Braga Coutinho,amanda.coutinho@fictmail.com,258.741.147-46,Shampoo Nutrição Intensa,Beleza,34.90,Entregue
+ORD-10047,Giovani Siqueira Passos,giovani.passos@fictmail.com,147.963.369-47,Livro: Marketing Digital,Livros,54.90,Entregue
+ORD-10048,Letícia Aguiar Rezende,leticia.rezende@fictmail.com,963.741.369-48,Batedeira Planetária Chef,Eletrodomésticos,549.00,Entregue
+ORD-10049,Wander Coelho Pinheiro,wander.pinheiro@fictmail.com,852.258.741-49,Bermuda Tactel Active,Vestuário,89.90,Em trânsito
+ORD-10050,Glória Macedo Assis,gloria.assis@fictmail.com,741.963.852-50,Webcam Full HD StreamPro,Eletrônicos,319.00,Entregue

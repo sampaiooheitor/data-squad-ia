@@ -1,0 +1,47 @@
+{
+  "tema": "E-commerce",
+  "table_name": "ecommerce_orders",
+  "description": "This table contains fictional e-commerce order records including customer details, product information, and transaction data.",
+  "columns": [
+    {
+      "name": "order_id",
+      "description": "Unique identifier for each order",
+      "example": "ORD-10001"
+    },
+    {
+      "name": "nome_completo",
+      "description": "Full name of the customer",
+      "example": "João Pereira Silva"
+    },
+    {
+      "name": "email",
+      "description": "Customer email address",
+      "example": "joao.silva@email.com"
+    },
+    {
+      "name": "cpf",
+      "description": "Customer CPF (Brazilian tax ID)",
+      "example": "123.456.789-00"
+    },
+    {
+      "name": "produto",
+      "description": "Name of the purchased product",
+      "example": "Smartphone Galaxy X10"
+    },
+    {
+      "name": "categoria",
+      "description": "Product category",
+      "example": "Eletrônicos"
+    },
+    {
+      "name": "valor_total",
+      "description": "Total order value in BRL",
+      "example": "1299.90"
+    },
+    {
+      "name": "status_pedido",
+      "description": "Current status of the order",
+      "example": "Entregue"
+    }
+  ]
+}
