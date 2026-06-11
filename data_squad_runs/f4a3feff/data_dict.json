@@ -1,0 +1,79 @@
+{
+  "tema": "Financeiro",
+  "table_name": "TBFIN_TRANSACOES",
+  "description": "Tabela que armazena as transações financeiras realizadas pelos clientes da organização.",
+  "columns": [
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_TRANSACOES",
+      "campo": "ID_TRANSACAO",
+      "datatype": "INTEGER",
+      "format_data": "",
+      "descricao": "Identificador único da transação financeira.",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_TRANSACOES",
+      "campo": "NM_CLIENTE",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Nome completo do cliente que realizou a transação.",
+      "indicador_sensivel": "S"
+    },
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_TRANSACOES",
+      "campo": "CD_CPF",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "CPF do cliente no formato XXX.XXX.XXX-XX.",
+      "indicador_sensivel": "S"
+    },
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_TRANSACOES",
+      "campo": "CD_TIPO_TRANSACAO",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Código do tipo de transação (ex: CREDITO, DEBITO, PIX, TED, DOC).",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_TRANSACOES",
+      "campo": "VL_TRANSACAO",
+      "datatype": "DECIMAL(15,2)",
+      "format_data": "",
+      "descricao": "Valor monetário da transação em reais.",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_TRANSACOES",
+      "campo": "DT_TRANSACAO",
+      "datatype": "DATE",
+      "format_data": "YYYY-MM-DD",
+      "descricao": "Data em que a transação foi realizada.",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_TRANSACOES",
+      "campo": "FL_ATIVO",
+      "datatype": "BOOLEAN",
+      "format_data": "",
+      "descricao": "Indicador se a transação está ativa (true) ou cancelada (false).",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "FIN",
+      "tabela": "TBFIN_TRANSACOES",
+      "campo": "CD_AGENCIA",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Código da agência bancária associada à transação.",
+      "indicador_sensivel": "N"
+    }
+  ]
+}
