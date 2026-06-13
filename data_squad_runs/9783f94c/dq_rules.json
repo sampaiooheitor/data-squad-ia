@@ -1,0 +1,16 @@
+{
+  "rules": [
+    {
+      "column": "1pIrYwUzHyvf3c7ataAQeskI_hnhlSgEO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "1pIrYwUzHyvf3c7ataAQeskI_hnhlSgEO",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^.{1,}$'",
+      "severity": "warning"
+    }
+  ]
+}
