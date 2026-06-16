@@ -1,0 +1,124 @@
+{
+  "rules": [
+    {
+      "column": "id_transacao",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "id_transacao",
+      "rule_type": "unique",
+      "expression": "COUNT(DISTINCT value) = COUNT(value)",
+      "severity": "error"
+    },
+    {
+      "column": "id_transacao",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^[a-zA-Z0-9_-]{1,64}$'",
+      "severity": "error"
+    },
+    {
+      "column": "nome_completo",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "nome_completo",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^[A-Za-zÀ-ÿ]{2,}(\\s[A-Za-zÀ-ÿ]{2,})+$'",
+      "severity": "warning"
+    },
+    {
+      "column": "cpf",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "cpf",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$'",
+      "severity": "error"
+    },
+    {
+      "column": "cpf",
+      "rule_type": "unique",
+      "expression": "COUNT(DISTINCT value) = COUNT(value)",
+      "severity": "warning"
+    },
+    {
+      "column": "email",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "email",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^[A-Za-z0-9._%+\\-]+@[A-Za-z0-9.\\-]+\\.[A-Za-z]{2,}$'",
+      "severity": "error"
+    },
+    {
+      "column": "tipo_transacao",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "tipo_transacao",
+      "rule_type": "referential",
+      "expression": "value IN ('CREDITO', 'DEBITO', 'TRANSFERENCIA', 'PIX', 'BOLETO', 'ESTORNO')",
+      "severity": "error"
+    },
+    {
+      "column": "valor",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "valor",
+      "rule_type": "range",
+      "expression": "value BETWEEN 0.01 AND 1000000.00",
+      "severity": "error"
+    },
+    {
+      "column": "valor",
+      "rule_type": "range",
+      "expression": "value BETWEEN 0.01 AND 10000.00",
+      "severity": "warning"
+    },
+    {
+      "column": "data_transacao",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "data_transacao",
+      "rule_type": "range",
+      "expression": "value BETWEEN '2000-01-01' AND CURRENT_DATE",
+      "severity": "error"
+    },
+    {
+      "column": "data_transacao",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$'",
+      "severity": "error"
+    },
+    {
+      "column": "status",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "status",
+      "rule_type": "referential",
+      "expression": "value IN ('PENDENTE', 'APROVADA', 'RECUSADA', 'CANCELADA', 'ESTORNADA', 'EM_PROCESSAMENTO')",
+      "severity": "error"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "tema": "financeiro",
+  "table_name": "transacoes_financeiras",
+  "description": "Tabela de transações financeiras de clientes com detalhes de pagamentos, valores e status.",
+  "columns": [
+    {
+      "name": "id_transacao",
+      "description": "Identificador único da transação",
+      "example": "TXN-00001"
+    },
+    {
+      "name": "nome_completo",
+      "description": "Nome completo do cliente",
+      "example": "Ana Paula Ferreira"
+    },
+    {
+      "name": "cpf",
+      "description": "CPF fictício do cliente",
+      "example": "123.456.789-00"
+    },
+    {
+      "name": "email",
+      "description": "Endereço de e-mail do cliente",
+      "example": "ana.ferreira@email.com"
+    },
+    {
+      "name": "tipo_transacao",
+      "description": "Tipo da transação financeira",
+      "example": "Crédito"
+    },
+    {
+      "name": "valor",
+      "description": "Valor da transação em reais",
+      "example": "1500.00"
+    },
+    {
+      "name": "data_transacao",
+      "description": "Data em que a transação foi realizada",
+      "example": "2024-01-15"
+    },
+    {
+      "name": "status",
+      "description": "Status atual da transação",
+      "example": "Aprovada"
+    }
+  ]
+}
