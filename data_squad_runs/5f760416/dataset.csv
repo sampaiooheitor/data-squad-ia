@@ -1,0 +1,51 @@
+ID_CAMPANHA|NM_CLIENTE|CD_CPF|DS_SEGMENTO|VL_INVESTIMENTO|DT_INICIO_CAMPANHA|FL_CONVERTIDO|DS_CANAL
+1001|Ana Paula Ferreira|312.456.789-01|Premium|1500.00|2024-01-05|true|E-mail
+1002|Carlos Eduardo Souza|423.567.890-12|Standard|800.00|2024-01-05|false|SMS
+1003|Mariana Costa Lima|534.678.901-23|VIP|3200.00|2024-01-10|true|Redes Sociais
+1004|Roberto Alves Nunes|645.789.012-34|Standard|600.00|2024-01-10|false|E-mail
+1005|Fernanda Oliveira Cruz|756.890.123-45|Premium|2100.00|2024-01-15|true|Push Notification
+1006|Lucas Mendes Barbosa|867.901.234-56|Basico|450.00|2024-01-15|false|SMS
+1007|Patricia Santos Rocha|978.012.345-67|VIP|4500.00|2024-01-20|true|E-mail
+1008|Diego Carvalho Pinto|089.123.456-78|Standard|750.00|2024-01-20|true|Redes Sociais
+1009|Juliana Martins Gomes|190.234.567-89|Basico|300.00|2024-01-25|false|SMS
+1010|Thiago Pereira Lima|201.345.678-90|Premium|1800.00|2024-01-25|true|E-mail
+1011|Bianca Rodrigues Teixeira|312.456.789-02|VIP|5000.00|2024-02-01|true|Push Notification
+1012|Felipe Nascimento Dias|423.567.890-13|Standard|700.00|2024-02-01|false|E-mail
+1013|Camila Azevedo Monteiro|534.678.901-24|Premium|1950.00|2024-02-05|true|Redes Sociais
+1014|Anderson Vieira Castro|645.789.012-35|Basico|350.00|2024-02-05|false|SMS
+1015|Leticia Cardoso Freitas|756.890.123-46|Standard|820.00|2024-02-10|true|E-mail
+1016|Marcos Araujo Henrique|867.901.234-57|VIP|3800.00|2024-02-10|true|Push Notification
+1017|Vanessa Lopes Correia|978.012.345-68|Premium|2200.00|2024-02-15|false|Redes Sociais
+1018|Bruno Moreira Figueiredo|089.123.456-79|Basico|410.00|2024-02-15|true|SMS
+1019|Simone Campos Ribeiro|190.234.567-90|Standard|660.00|2024-02-20|false|E-mail
+1020|Rafael Teixeira Guimaraes|201.345.678-91|VIP|4100.00|2024-02-20|true|Redes Sociais
+1021|Aline Fonseca Batista|312.456.789-03|Premium|1700.00|2024-02-25|true|Push Notification
+1022|Gustavo Ramos Cavalcante|423.567.890-14|Standard|780.00|2024-02-25|false|E-mail
+1023|Isabela Macedo Borges|534.678.901-25|Basico|390.00|2024-03-01|true|SMS
+1024|Renato Cunha Nogueira|645.789.012-36|VIP|4700.00|2024-03-01|true|E-mail
+1025|Tatiana Melo Andrade|756.890.123-47|Premium|2050.00|2024-03-05|false|Redes Sociais
+1026|Alexandre Pires Duarte|867.901.234-58|Standard|710.00|2024-03-05|true|Push Notification
+1027|Priscila Almeida Tavares|978.012.345-69|Basico|470.00|2024-03-10|false|SMS
+1028|Rodrigo Brito Vasconcellos|089.123.456-80|VIP|3600.00|2024-03-10|true|E-mail
+1029|Natalia Rezende Meireles|190.234.567-91|Premium|1850.00|2024-03-15|true|Redes Sociais
+1030|Eduardo Santana Pacheco|201.345.678-92|Standard|690.00|2024-03-15|false|SMS
+1031|Monica Queiroz Lacerda|312.456.789-04|Basico|320.00|2024-03-20|true|E-mail
+1032|Vinicius Sousa Carneiro|423.567.890-15|VIP|4300.00|2024-03-20|true|Push Notification
+1033|Claudia Neves Sampaio|534.678.901-26|Premium|2300.00|2024-03-25|false|Redes Sociais
+1034|Henrique Magalhaes Xavier|645.789.012-37|Standard|840.00|2024-03-25|true|E-mail
+1035|Larissa Moura Evangelista|756.890.123-48|Basico|360.00|2024-04-01|false|SMS
+1036|Daniel Leite Cerqueira|867.901.234-59|VIP|5200.00|2024-04-01|true|Push Notification
+1037|Fabiana Goncalves Pimentel|978.012.345-70|Premium|1600.00|2024-04-05|true|E-mail
+1038|Mauricio Bastos Wanderley|089.123.456-81|Standard|730.00|2024-04-05|false|Redes Sociais
+1039|Sabrina Dias Furtado|190.234.567-92|Basico|480.00|2024-04-10|true|SMS
+1040|Leandro Paiva Drummond|201.345.678-93|VIP|3900.00|2024-04-10|false|E-mail
+1041|Adriana Coelho Brandao|312.456.789-05|Premium|2400.00|2024-04-15|true|Push Notification
+1042|Wesley Fernandes Abreu|423.567.890-16|Standard|670.00|2024-04-15|true|Redes Sociais
+1043|Daniela Rocha Lustosa|534.678.901-27|Basico|340.00|2024-04-20|false|SMS
+1044|Murilo Amorim Falcao|645.789.012-38|VIP|4600.00|2024-04-20|true|E-mail
+1045|Cristiane Barros Fontes|756.890.123-49|Premium|1750.00|2024-04-25|false|Redes Sociais
+1046|Evandro Matos Bittencourt|867.901.234-60|Standard|860.00|2024-04-25|true|Push Notification
+1047|Solange Pinheiro Veloso|978.012.345-71|Basico|430.00|2024-05-01|true|SMS
+1048|Caio Medeiros Quarteiro|089.123.456-82|VIP|4800.00|2024-05-01|false|E-mail
+1049|Elaine Vasconcelos Trindade|190.234.567-93|Premium|2150.00|2024-05-05|true|Redes Sociais
+1050|Jonas Pompeu Estrela|201.345.678-94|Standard|720.00|2024-05-05|false|Push Notification

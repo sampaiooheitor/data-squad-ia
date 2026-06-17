@@ -1,0 +1,60 @@
+{
+  "columns": [
+    {
+      "name": "ID_CAMPANHA",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Marketing",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "NM_CLIENTE",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "Marketing",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "CD_CPF",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "Marketing",
+      "masking_strategy": "mask"
+    },
+    {
+      "name": "DS_SEGMENTO",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Marketing",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "VL_INVESTIMENTO",
+      "pii": false,
+      "sensitivity": "confidential",
+      "owner": "Financeiro",
+      "masking_strategy": "encrypt"
+    },
+    {
+      "name": "DT_INICIO_CAMPANHA",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Marketing",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "FL_CONVERTIDO",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Marketing",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "DS_CANAL",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Marketing",
+      "masking_strategy": "none"
+    }
+  ]
+}

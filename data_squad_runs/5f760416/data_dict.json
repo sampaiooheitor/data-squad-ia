@@ -1,0 +1,79 @@
+{
+  "tema": "Marketing",
+  "table_name": "TBMKT_CAMPANHAS",
+  "description": "Tabela de campanhas de marketing com informações de clientes, segmentos e desempenho de ações promocionais.",
+  "columns": [
+    {
+      "origem": "MKT",
+      "tabela": "TBMKT_CAMPANHAS",
+      "campo": "ID_CAMPANHA",
+      "datatype": "INTEGER",
+      "format_data": "",
+      "descricao": "Identificador único da campanha de marketing",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "MKT",
+      "tabela": "TBMKT_CAMPANHAS",
+      "campo": "NM_CLIENTE",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Nome completo do cliente participante da campanha",
+      "indicador_sensivel": "S"
+    },
+    {
+      "origem": "MKT",
+      "tabela": "TBMKT_CAMPANHAS",
+      "campo": "CD_CPF",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "CPF do cliente participante da campanha",
+      "indicador_sensivel": "S"
+    },
+    {
+      "origem": "MKT",
+      "tabela": "TBMKT_CAMPANHAS",
+      "campo": "DS_SEGMENTO",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Segmento de mercado ao qual o cliente pertence",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "MKT",
+      "tabela": "TBMKT_CAMPANHAS",
+      "campo": "VL_INVESTIMENTO",
+      "datatype": "DECIMAL(15,2)",
+      "format_data": "",
+      "descricao": "Valor investido na campanha para o cliente",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "MKT",
+      "tabela": "TBMKT_CAMPANHAS",
+      "campo": "DT_INICIO_CAMPANHA",
+      "datatype": "DATE",
+      "format_data": "YYYY-MM-DD",
+      "descricao": "Data de início da campanha de marketing",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "MKT",
+      "tabela": "TBMKT_CAMPANHAS",
+      "campo": "FL_CONVERTIDO",
+      "datatype": "BOOLEAN",
+      "format_data": "",
+      "descricao": "Indicador se o cliente converteu durante a campanha",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "MKT",
+      "tabela": "TBMKT_CAMPANHAS",
+      "campo": "DS_CANAL",
+      "datatype": "STRING",
+      "format_data": "",
+      "descricao": "Canal utilizado para comunicação da campanha",
+      "indicador_sensivel": "N"
+    }
+  ]
+}

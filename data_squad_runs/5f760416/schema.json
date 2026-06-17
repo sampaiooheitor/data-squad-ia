@@ -1,0 +1,53 @@
+{
+  "table_name": "TBMKT_CAMPANHAS",
+  "columns": [
+    {
+      "name": "ID_CAMPANHA",
+      "type": "integer",
+      "nullable": false,
+      "is_pk": true
+    },
+    {
+      "name": "NM_CLIENTE",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "CD_CPF",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "DS_SEGMENTO",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "VL_INVESTIMENTO",
+      "type": "float",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "DT_INICIO_CAMPANHA",
+      "type": "date",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "FL_CONVERTIDO",
+      "type": "boolean",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "DS_CANAL",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    }
+  ]
+}
