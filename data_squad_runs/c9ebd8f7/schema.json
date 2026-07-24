@@ -1,0 +1,29 @@
+{
+  "table_name": "TBFIN_LANCAMENTOS",
+  "columns": [
+    {
+      "name": "id_lancamento",
+      "type": "integer",
+      "nullable": false,
+      "is_pk": true
+    },
+    {
+      "name": "valor",
+      "type": "float",
+      "nullable": true,
+      "is_pk": false
+    },
+    {
+      "name": "dt_referencia",
+      "type": "date",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "cpf_cliente",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    }
+  ]
+}
