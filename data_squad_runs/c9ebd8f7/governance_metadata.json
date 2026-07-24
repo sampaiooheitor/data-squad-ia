@@ -1,0 +1,32 @@
+{
+  "columns": [
+    {
+      "name": "id_lancamento",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "financeiro",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "valor",
+      "pii": false,
+      "sensitivity": "confidential",
+      "owner": "financeiro",
+      "masking_strategy": "encrypt"
+    },
+    {
+      "name": "dt_referencia",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "financeiro",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "cpf_cliente",
+      "pii": true,
+      "sensitivity": "restricted",
+      "owner": "financeiro",
+      "masking_strategy": "mask"
+    }
+  ]
+}
