@@ -2,6 +2,7 @@
 
 import asyncio
 import copy
+import json
 import logging
 import os
 import time
@@ -9,11 +10,12 @@ import time
 from dotenv import load_dotenv
 load_dotenv()
 
-_SKIP_PLAYWRIGHT = os.getenv("SKIP_PLAYWRIGHT", "false").lower() == "true"
-_INPUT_DICT_CSV   = os.getenv("INPUT_DICT_CSV", "").strip()
-_INPUT_TABLE_NAME = os.getenv("INPUT_TABLE_NAME", "").strip()
-_INPUT_TEMA       = os.getenv("INPUT_TEMA", "").strip()
-_INPUT_SAMPLE_CSV = os.getenv("INPUT_SAMPLE_CSV", "").strip()
+_SKIP_PLAYWRIGHT     = os.getenv("SKIP_PLAYWRIGHT", "false").lower() == "true"
+_INPUT_DICT_CSV      = os.getenv("INPUT_DICT_CSV", "").strip()
+_INPUT_TABLE_NAME    = os.getenv("INPUT_TABLE_NAME", "").strip()
+_INPUT_TEMA          = os.getenv("INPUT_TEMA", "").strip()
+_INPUT_SAMPLE_CSV    = os.getenv("INPUT_SAMPLE_CSV", "").strip()
+_INPUT_CONTRACT_META = os.getenv("INPUT_CONTRACT_META", "").strip()
 
 from src.agents import (
     data_generator,
@@ -37,6 +39,12 @@ logger = logging.getLogger("orchestrator")
 async def run_pipeline() -> RunContext:
     ctx = RunContext()
     timings: dict[str, float] = {}
+
+    if _INPUT_CONTRACT_META:
+        try:
+            ctx.contract_meta = json.loads(_INPUT_CONTRACT_META)
+        except json.JSONDecodeError:
+            logger.warning("INPUT_CONTRACT_META is not valid JSON — ignoring")
 
     logger.info("=" * 60)
     logger.info("DATA SQUAD — run %s", ctx.run_id)

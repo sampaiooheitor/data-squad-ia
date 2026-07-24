@@ -80,6 +80,7 @@ class RunContext:
     tema: str = ""
     csv_content: str = ""
     csv_dbfs_path: str = ""
+    contract_meta: dict = field(default_factory=dict)
     data_dict: DataDictOutput | None = None
     schema: SchemaOutput | None = None
     dq_rules: DQRulesOutput | None = None

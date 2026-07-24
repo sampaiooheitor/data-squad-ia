@@ -12,12 +12,13 @@ _GOV_SCHEMA = json.dumps(GovernanceOutput.model_json_schema(), indent=2)
 
 async def run(ctx: RunContext) -> RunContext:
     schema_summary = _format_schema(ctx)
+    contract_context = _format_contract(ctx)
 
     response = _client.messages.create(
         model=settings.claude_model,
         max_tokens=2048,
         system=f"""You are a data governance and privacy expert (LGPD/GDPR aware).
-Classify each column of a dataset based on its name and type.
+Classify each column of a dataset based on its name, type, and the data contract filled by the data owner.
 Return ONLY valid JSON matching this exact schema (no markdown):
 {_GOV_SCHEMA}
 
@@ -33,11 +34,13 @@ Classification rules:
   * "hash": unique identifiers that need referential integrity (email used as FK)
   * "mask": show partial value (e.g., "***@domain.com", "XXX.XXX.XXX-XX")
   * "encrypt": highly sensitive fields (salary, medical, credit card)
-- owner: infer the business team that owns this column (e.g., "RH", "Financeiro", "TI")""",
+- owner: use the business domain from the contract if provided; otherwise infer from column semantics
+
+IMPORTANT: columns explicitly listed as sensitive by the data owner MUST have pii=true and a masking_strategy other than "none", regardless of their name.""",
         messages=[
             {
                 "role": "user",
-                "content": f"Classify governance for this schema:\n{schema_summary}",
+                "content": f"Classify governance for this schema:\n{schema_summary}\n\n{contract_context}",
             }
         ],
     )
@@ -57,3 +60,19 @@ def _format_schema(ctx: RunContext) -> str:
     for col in ctx.schema.columns:
         lines.append(f"  - {col.name}: {col.type} (nullable={col.nullable})")
     return "\n".join(lines)
+
+
+def _format_contract(ctx: RunContext) -> str:
+    if not ctx.contract_meta:
+        return ""
+    m = ctx.contract_meta
+    lines = ["Data contract (filled by the data owner):"]
+    if m.get("colunas_sensiveis"):
+        lines.append(f"  - Columns declared as sensitive/PII by the owner: {m['colunas_sensiveis']}")
+    if m.get("classificacao"):
+        lines.append(f"  - Overall data classification: {m['classificacao']}")
+    if m.get("dominio"):
+        lines.append(f"  - Business domain: {m['dominio']}")
+    if m.get("dono"):
+        lines.append(f"  - Data owner: {m['dono']}")
+    return "\n".join(lines) if len(lines) > 1 else ""

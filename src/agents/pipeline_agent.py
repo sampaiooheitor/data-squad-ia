@@ -12,7 +12,20 @@ _BRONZE_SCHEMA = yaml_config.get("pipeline", {}).get("bronze_schema", "bronze")
 _SILVER_SCHEMA = yaml_config.get("pipeline", {}).get("silver_schema", "silver")
 
 
-def _build_bronze_notebook(source_path: str, table_name: str, source_system: str) -> str:
+def _build_bronze_notebook(source_path: str, table_name: str, source_system: str, write_mode: str = "append") -> str:
+    if write_mode == "overwrite":
+        write_block = (
+            '(\n    df.write\n    .format("delta")\n    .mode("overwrite")\n'
+            '    .option("overwriteSchema", "true")\n    .saveAsTable(TABLE_NAME)\n)'
+        )
+        print_msg = 'print(f"Bronze: {df.count()} rows written (full overwrite) to {TABLE_NAME}")'
+    else:
+        write_block = (
+            '(\n    df.write\n    .format("delta")\n    .mode("append")\n'
+            '    .option("mergeSchema", "true")\n    .saveAsTable(TABLE_NAME)\n)'
+        )
+        print_msg = 'print(f"Bronze: {df.count()} rows appended to {TABLE_NAME}")'
+
     return f"""\
 from pyspark.sql import SparkSession, functions as F
 
@@ -31,14 +44,8 @@ df = (
     .withColumn("_source_system", F.lit(SOURCE_SYSTEM))
 )
 
-(
-    df.write
-    .format("delta")
-    .mode("append")
-    .option("mergeSchema", "true")
-    .saveAsTable(TABLE_NAME)
-)
-print(f"Bronze: {{df.count()}} rows appended to {{TABLE_NAME}}")
+{write_block}
+{print_msg}
 """
 
 
@@ -80,6 +87,11 @@ async def run(ctx: RunContext) -> RunContext:
     ctx.table_bronze = f"{_CATALOG}.{_BRONZE_SCHEMA}.{table_name}"
     ctx.table_silver = f"{_CATALOG}.{_SILVER_SCHEMA}.{table_name}"
     rejected_table = f"{_CATALOG}.{_SILVER_SCHEMA}.{table_name}_rejected"
+
+    m = ctx.contract_meta
+    source_system = m.get("sistema_origem", "data_squad") if m else "data_squad"
+    modo_escrita = m.get("modo_escrita", "") if m else ""
+    bronze_write_mode = "overwrite" if "completa" in modo_escrita.lower() else "append"
 
     response = _client.messages.create(
         model=settings.claude_model,
@@ -126,7 +138,8 @@ Return ONLY the JSON, no markdown fences.""",
     ctx.bronze_notebook = _build_bronze_notebook(
         source_path=ctx.csv_dbfs_path,
         table_name=ctx.table_bronze,
-        source_system="data_squad",
+        source_system=source_system,
+        write_mode=bronze_write_mode,
     )
     ctx.silver_notebook = _build_silver_notebook(
         bronze_table=ctx.table_bronze,
@@ -155,5 +168,17 @@ def _build_context(ctx: RunContext) -> str:
         for col in ctx.governance.columns:
             if col.masking_strategy != "none":
                 parts.append(f"  {col.name}: {col.masking_strategy}")
+
+    if ctx.contract_meta:
+        m = ctx.contract_meta
+        parts += ["", "Data contract (filled by the data owner):"]
+        if m.get("on_invalid"):
+            parts.append(f"  - On invalid records: {m['on_invalid']}")
+        if m.get("tolerancia_pct"):
+            parts.append(f"  - Error tolerance: {m['tolerancia_pct']}")
+        if m.get("campo_referencia"):
+            parts.append(f"  - Reference date column: {m['campo_referencia']}")
+        if m.get("modo_escrita"):
+            parts.append(f"  - Load behavior: {m['modo_escrita']}")
 
     return "\n".join(parts)
