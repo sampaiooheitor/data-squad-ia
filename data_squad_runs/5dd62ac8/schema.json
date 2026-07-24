@@ -1,0 +1,29 @@
+{
+  "table_name": "TBFIN_LANCAMENTOS_RH",
+  "columns": [
+    {
+      "name": "ID_LANCAMENTO",
+      "type": "integer",
+      "nullable": false,
+      "is_pk": true
+    },
+    {
+      "name": "DT_LANCAMENTO",
+      "type": "date",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "VL_LANCAMENTO",
+      "type": "float",
+      "nullable": false,
+      "is_pk": false
+    },
+    {
+      "name": "NM_FORNECEDOR",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    }
+  ]
+}
