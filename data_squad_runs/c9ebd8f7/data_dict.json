@@ -1,0 +1,43 @@
+{
+  "tema": "unknown",
+  "table_name": "TBFIN_LANCAMENTOS",
+  "description": "Tabela TBFIN_LANCAMENTOS carregada via dicionário do formulário.",
+  "columns": [
+    {
+      "origem": "SAP",
+      "tabela": "TBFIN_LANCAMENTOS",
+      "campo": "id_lancamento",
+      "datatype": "integer",
+      "format_data": "",
+      "descricao": "ID do lancamento",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "SAP",
+      "tabela": "TBFIN_LANCAMENTOS",
+      "campo": "valor",
+      "datatype": "float",
+      "format_data": "",
+      "descricao": "Valor do lancamento",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "SAP",
+      "tabela": "TBFIN_LANCAMENTOS",
+      "campo": "dt_referencia",
+      "datatype": "date",
+      "format_data": "",
+      "descricao": "Data de referencia",
+      "indicador_sensivel": "N"
+    },
+    {
+      "origem": "SAP",
+      "tabela": "TBFIN_LANCAMENTOS",
+      "campo": "cpf_cliente",
+      "datatype": "string",
+      "format_data": "",
+      "descricao": "CPF do cliente",
+      "indicador_sensivel": "S"
+    }
+  ]
+}
