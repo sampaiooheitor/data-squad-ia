@@ -1,0 +1,32 @@
+{
+  "columns": [
+    {
+      "name": "ID_LANCAMENTO",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "financeiro",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "DT_LANCAMENTO",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "financeiro",
+      "masking_strategy": "none"
+    },
+    {
+      "name": "VL_LANCAMENTO",
+      "pii": false,
+      "sensitivity": "confidential",
+      "owner": "financeiro",
+      "masking_strategy": "encrypt"
+    },
+    {
+      "name": "NM_FORNECEDOR",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "financeiro",
+      "masking_strategy": "none"
+    }
+  ]
+}
