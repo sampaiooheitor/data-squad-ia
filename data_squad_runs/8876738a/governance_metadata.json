@@ -1,0 +1,11 @@
+{
+  "columns": [
+    {
+      "name": "1WJpYXJm0-sgF1886jKz9ICJ1A9hzBlqT",
+      "pii": false,
+      "sensitivity": "internal",
+      "owner": "Financeiro/RH",
+      "masking_strategy": "none"
+    }
+  ]
+}

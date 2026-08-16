@@ -1,0 +1,11 @@
+{
+  "table_name": "TBFIN_LANCAMENTOS_RH",
+  "columns": [
+    {
+      "name": "1WJpYXJm0-sgF1886jKz9ICJ1A9hzBlqT",
+      "type": "string",
+      "nullable": false,
+      "is_pk": false
+    }
+  ]
+}
