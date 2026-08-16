@@ -1,0 +1,112 @@
+{
+  "rules": [
+    {
+      "column": "ID_LANCAMENTO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "ID_LANCAMENTO",
+      "rule_type": "unique",
+      "expression": "COUNT(DISTINCT value) = COUNT(value)",
+      "severity": "error"
+    },
+    {
+      "column": "ID_LANCAMENTO",
+      "rule_type": "range",
+      "expression": "value BETWEEN 1 AND 9999999999",
+      "severity": "error"
+    },
+    {
+      "column": "DT_LANCAMENTO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "DT_LANCAMENTO",
+      "rule_type": "range",
+      "expression": "value BETWEEN '2000-01-01' AND '2099-12-31'",
+      "severity": "error"
+    },
+    {
+      "column": "VL_LANCAMENTO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "VL_LANCAMENTO",
+      "rule_type": "range",
+      "expression": "value BETWEEN -999999999.99 AND 999999999.99",
+      "severity": "error"
+    },
+    {
+      "column": "VL_LANCAMENTO",
+      "rule_type": "range",
+      "expression": "value BETWEEN 0.01 AND 999999999.99",
+      "severity": "warning"
+    },
+    {
+      "column": "CD_CENTRO_CUSTO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "CD_CENTRO_CUSTO",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^[A-Z0-9]{2,20}$'",
+      "severity": "warning"
+    },
+    {
+      "column": "NM_FORNECEDOR",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "NM_FORNECEDOR",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^[\\S].{1,199}$'",
+      "severity": "warning"
+    },
+    {
+      "column": "NR_CPF_CNPJ",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "NR_CPF_CNPJ",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^([0-9]{11}|[0-9]{14})$'",
+      "severity": "error"
+    },
+    {
+      "column": "DS_HISTORICO",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "DS_HISTORICO",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^[\\S].{0,499}$'",
+      "severity": "warning"
+    },
+    {
+      "column": "CD_STATUS",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "CD_STATUS",
+      "rule_type": "referential",
+      "expression": "value IN ('ATIVO', 'CANCELADO', 'PENDENTE', 'PROCESSADO', 'ESTORNADO')",
+      "severity": "error"
+    }
+  ]
+}
