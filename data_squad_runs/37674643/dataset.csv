@@ -1,0 +1,51 @@
+id_entrega,nome_cliente,cpf_cliente,email_cliente,cidade_destino,status_entrega,data_envio,peso_kg
+ENT-00001,Carlos Mendes Oliveira,312.456.789-01,carlos.oliveira@email.com,São Paulo,Entregue,2024-01-03,2.5
+ENT-00002,Fernanda Lima Souza,423.567.890-12,fernanda.lima@email.com,Rio de Janeiro,Em trânsito,2024-01-04,1.2
+ENT-00003,Roberto Alves Pereira,534.678.901-23,roberto.alves@email.com,Belo Horizonte,Entregue,2024-01-05,4.7
+ENT-00004,Juliana Costa Martins,645.789.012-34,juliana.costa@email.com,Curitiba,Pendente,2024-01-06,0.8
+ENT-00005,Marcos Henrique Dias,756.890.123-45,marcos.dias@email.com,Porto Alegre,Entregue,2024-01-07,3.3
+ENT-00006,Ana Paula Ferreira,867.901.234-56,ana.ferreira@email.com,Salvador,Cancelado,2024-01-08,5.1
+ENT-00007,Lucas Rodrigues Neto,978.012.345-67,lucas.rodrigues@email.com,Fortaleza,Entregue,2024-01-09,2.0
+ENT-00008,Patricia Gomes Vieira,089.123.456-78,patricia.gomes@email.com,Manaus,Em trânsito,2024-01-10,6.4
+ENT-00009,Eduardo Ribeiro Campos,190.234.567-89,eduardo.ribeiro@email.com,Recife,Entregue,2024-01-11,1.9
+ENT-00010,Camila Nascimento Braga,201.345.678-90,camila.nascimento@email.com,Goiânia,Pendente,2024-01-12,3.7
+ENT-00011,Thiago Barbosa Lima,312.456.789-01,thiago.barbosa@email.com,Brasília,Entregue,2024-01-13,2.2
+ENT-00012,Leticia Cardoso Pinto,423.567.890-12,leticia.cardoso@email.com,Belém,Em trânsito,2024-01-14,4.0
+ENT-00013,Felipe Moreira Santos,534.678.901-23,felipe.moreira@email.com,São Luís,Entregue,2024-01-15,1.5
+ENT-00014,Vanessa Teixeira Cruz,645.789.012-34,vanessa.teixeira@email.com,Maceió,Cancelado,2024-01-16,7.8
+ENT-00015,Gabriel Antunes Rocha,756.890.123-45,gabriel.antunes@email.com,Natal,Entregue,2024-01-17,2.9
+ENT-00016,Aline Fonseca Duarte,867.901.234-56,aline.fonseca@email.com,Teresina,Em trânsito,2024-01-18,3.1
+ENT-00017,Diego Cavalcanti Melo,978.012.345-67,diego.cavalcanti@email.com,Campo Grande,Entregue,2024-01-19,5.5
+ENT-00018,Renata Azevedo Lopes,089.123.456-78,renata.azevedo@email.com,Cuiabá,Pendente,2024-01-20,0.6
+ENT-00019,Bruno Machado Freitas,190.234.567-89,bruno.machado@email.com,Porto Velho,Entregue,2024-01-21,4.3
+ENT-00020,Isabela Cunha Ramos,201.345.678-90,isabela.cunha@email.com,Macapá,Em trânsito,2024-01-22,2.7
+ENT-00021,Rodrigo Bittencourt Vale,312.456.789-11,rodrigo.bittencourt@email.com,Florianópolis,Entregue,2024-01-23,3.9
+ENT-00022,Mariana Peixoto Abreu,423.567.890-22,mariana.peixoto@email.com,Vitória,Cancelado,2024-01-24,1.1
+ENT-00023,Gustavo Aragão Matos,534.678.901-33,gustavo.aragao@email.com,João Pessoa,Entregue,2024-01-25,6.2
+ENT-00024,Simone Lacerda Queiroz,645.789.012-44,simone.lacerda@email.com,Aracaju,Em trânsito,2024-01-26,2.4
+ENT-00025,Alexandre Nunes Correia,756.890.123-55,alexandre.nunes@email.com,Rio Branco,Pendente,2024-01-27,5.0
+ENT-00026,Tatiana Salles Borges,867.901.234-66,tatiana.salles@email.com,Palmas,Entregue,2024-01-28,3.6
+ENT-00027,Henrique Vasconcelos Maia,978.012.345-77,henrique.vasconcelos@email.com,Boa Vista,Em trânsito,2024-01-29,1.8
+ENT-00028,Priscila Monteiro Tavares,089.123.456-88,priscila.monteiro@email.com,São Paulo,Entregue,2024-01-30,4.5
+ENT-00029,Daniel Esteves Coelho,190.234.567-99,daniel.esteves@email.com,Rio de Janeiro,Cancelado,2024-01-31,2.1
+ENT-00030,Larissa Drummond Farias,201.345.678-10,larissa.drummond@email.com,Belo Horizonte,Entregue,2024-02-01,3.4
+ENT-00031,Vinícius Carvalho Leite,312.456.789-21,vinicius.carvalho@email.com,Curitiba,Pendente,2024-02-02,6.9
+ENT-00032,Mônica Resende Batista,423.567.890-32,monica.resende@email.com,Porto Alegre,Entregue,2024-02-03,1.3
+ENT-00033,Fábio Guimarães Prado,534.678.901-43,fabio.guimaraes@email.com,Salvador,Em trânsito,2024-02-04,5.7
+ENT-00034,Cristina Paiva Medeiros,645.789.012-54,cristina.paiva@email.com,Fortaleza,Entregue,2024-02-05,2.6
+ENT-00035,Leonardo Figueiredo Sá,756.890.123-65,leonardo.figueiredo@email.com,Manaus,Cancelado,2024-02-06,7.2
+ENT-00036,Sabrina Nogueira Britto,867.901.234-76,sabrina.nogueira@email.com,Recife,Entregue,2024-02-07,3.0
+ENT-00037,Otávio Sampaio Cordeiro,978.012.345-87,otavio.sampaio@email.com,Goiânia,Em trânsito,2024-02-08,4.8
+ENT-00038,Beatriz Leal Andrade,089.123.456-98,beatriz.leal@email.com,Brasília,Entregue,2024-02-09,1.6
+ENT-00039,Sergio Pimentel Dantas,190.234.567-09,sergio.pimentel@email.com,Belém,Pendente,2024-02-10,5.3
+ENT-00040,Natália Coutinho Vilas,201.345.678-20,natalia.coutinho@email.com,São Luís,Entregue,2024-02-11,2.8
+ENT-00041,Paulo Henrique Bastos,312.456.789-31,paulo.bastos@email.com,Maceió,Em trânsito,2024-02-12,6.1
+ENT-00042,Raquel Assis Wanderley,423.567.890-42,raquel.assis@email.com,Natal,Entregue,2024-02-13,1.7
+ENT-00043,Caio Trindade Furtado,534.678.901-53,caio.trindade@email.com,Teresina,Cancelado,2024-02-14,4.4
+ENT-00044,Elaine Fontes Quirino,645.789.012-64,elaine.fontes@email.com,Campo Grande,Entregue,2024-02-15,3.2
+ENT-00045,Rafael Meireles Godoi,756.890.123-75,rafael.meireles@email.com,Cuiabá,Em trânsito,2024-02-16,5.9
+ENT-00046,Juliane Cristina Luz,867.901.234-86,juliane.luz@email.com,Porto Velho,Pendente,2024-02-17,0.9
+ENT-00047,Anderson Pacheco Mesquita,978.012.345-97,anderson.pacheco@email.com,Macapá,Entregue,2024-02-18,3.5
+ENT-00048,Karina Oliveira Mendes,089.123.456-08,karina.oliveira@email.com,Florianópolis,Em trânsito,2024-02-19,2.3
+ENT-00049,Willian Soares Penha,190.234.567-19,willian.soares@email.com,Vitória,Entregue,2024-02-20,4.6
+ENT-00050,Elisa Campos Vilaça,201.345.678-30,elisa.campos@email.com,João Pessoa,Cancelado,2024-02-21,7.0

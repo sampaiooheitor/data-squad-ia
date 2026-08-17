@@ -1,0 +1,47 @@
+{
+  "tema": "logistica",
+  "table_name": "logistica_entregas",
+  "description": "Tabela de controle de entregas logísticas com informações de clientes, motoristas e status de envio.",
+  "columns": [
+    {
+      "name": "id_entrega",
+      "description": "Identificador único da entrega",
+      "example": "ENT-00001"
+    },
+    {
+      "name": "nome_cliente",
+      "description": "Nome completo do cliente destinatário",
+      "example": "Carlos Mendes Oliveira"
+    },
+    {
+      "name": "cpf_cliente",
+      "description": "CPF do cliente destinatário",
+      "example": "123.456.789-00"
+    },
+    {
+      "name": "email_cliente",
+      "description": "Email do cliente",
+      "example": "carlos.oliveira@email.com"
+    },
+    {
+      "name": "cidade_destino",
+      "description": "Cidade de destino da entrega",
+      "example": "São Paulo"
+    },
+    {
+      "name": "status_entrega",
+      "description": "Status atual da entrega",
+      "example": "Entregue"
+    },
+    {
+      "name": "data_envio",
+      "description": "Data em que o pacote foi enviado",
+      "example": "2024-01-15"
+    },
+    {
+      "name": "peso_kg",
+      "description": "Peso do pacote em quilogramas",
+      "example": "2.5"
+    }
+  ]
+}

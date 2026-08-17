@@ -1,0 +1,106 @@
+{
+  "rules": [
+    {
+      "column": "id_entrega",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "id_entrega",
+      "rule_type": "unique",
+      "expression": "COUNT(DISTINCT value) = COUNT(value)",
+      "severity": "error"
+    },
+    {
+      "column": "id_entrega",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^[A-Za-z0-9\\-_]{1,50}$'",
+      "severity": "error"
+    },
+    {
+      "column": "nome_cliente",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "nome_cliente",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^[A-Za-zÀ-ÿ\\s]{2,100}$'",
+      "severity": "warning"
+    },
+    {
+      "column": "cpf_cliente",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "cpf_cliente",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$'",
+      "severity": "error"
+    },
+    {
+      "column": "email_cliente",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "email_cliente",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^[A-Za-z0-9._%+\\-]+@[A-Za-z0-9.\\-]+\\.[A-Za-z]{2,}$'",
+      "severity": "error"
+    },
+    {
+      "column": "cidade_destino",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "cidade_destino",
+      "rule_type": "regex",
+      "expression": "value REGEXP '^[A-Za-zÀ-ÿ\\s\\-]{2,100}$'",
+      "severity": "warning"
+    },
+    {
+      "column": "status_entrega",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "status_entrega",
+      "rule_type": "referential",
+      "expression": "value IN ('PENDENTE', 'EM_TRANSITO', 'ENTREGUE', 'CANCELADO', 'DEVOLVIDO')",
+      "severity": "error"
+    },
+    {
+      "column": "data_envio",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "data_envio",
+      "rule_type": "range",
+      "expression": "value BETWEEN '2000-01-01' AND CURRENT_DATE",
+      "severity": "error"
+    },
+    {
+      "column": "peso_kg",
+      "rule_type": "not_null",
+      "expression": "value IS NOT NULL",
+      "severity": "error"
+    },
+    {
+      "column": "peso_kg",
+      "rule_type": "range",
+      "expression": "value BETWEEN 0.01 AND 10000.00",
+      "severity": "error"
+    }
+  ]
+}
